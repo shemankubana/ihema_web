@@ -37,7 +37,8 @@ const Home = () => {
         <p>Grounded in real-world conditions to deliver sustainable and practical outcomes.</p>
         </div>
         <div className="learn-more">
-            <h2>Communities hold the truth — we help bring it to light.</h2>
+            <h2>Communities hold the truth </h2>
+            <h2>— we help bring it to light.</h2>
         <button className="learn-more-button">Learn More</button>
         </div>
         </div>
