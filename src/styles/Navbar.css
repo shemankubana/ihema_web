@@ -13,7 +13,7 @@
 }
 
 .navbar-logo {
-  height: 49px;
+  height: 40px;
 }
 
 .right-container {
@@ -31,7 +31,7 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 15px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -70,10 +70,11 @@
 .nav-actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   background-color: white;
   border-radius: 34.5px;
-  padding: 10px 30px;
+  padding: 5px 20px;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -84,9 +85,10 @@
 
 .nav-actions p {
   color: #333;
-  font-weight: 500;
+  font-weight: medium;
+  font-size: 13px;
 }
 
 .nav-actions img {
-  width: 47px;
+  width: 40px;
 }
