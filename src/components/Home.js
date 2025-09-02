@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 
@@ -24,6 +24,172 @@ import vsoLogo from "../assets/logos/VSO 1.png";
 import wfpLogo from "../assets/logos/WFP 1.png";
 import mscLogo from "../assets/logos/MSC 1.png";
 
+// --- Data for the Animated Approach component ---
+const stepsData = [
+  {
+    id: 1,
+    title: 'Community-Centered Methods',
+    description: 'Grounded in local culture and realities to ensure relevant, accurate, and respectful outcomes.',
+  },
+  {
+    id: 2,
+    title: 'Collaborative Partnerships',
+    description: 'We work hand-in-hand with local organizations, building trust and ensuring our work has a lasting impact.',
+  },
+  {
+    id: 3,
+    title: 'Data-Driven Insights',
+    description: 'Leveraging rigorous data analysis to provide clear, actionable insights that drive effective decision-making.',
+  },
+];
+
+// --- The Animated Approach Component ---
+const AnimatedApproach = () => {
+  const [activeStep, setActiveStep] = useState(0);
+
+  // Refs for the elements that will be animated
+  const lineRef = useRef(null);
+  const activeDotRef = useRef(null);
+
+  const animationState = useRef({
+    currentAngle: -90, // Start at the top to match the visual
+  });
+
+  const config = {
+    numSteps: stepsData.length,
+    svgSize: 800,
+    arcRadius: 380,
+    dotSize: 30,
+    activeDotSize: 40,
+  };
+  const centerX = config.svgSize / 2;
+  const centerY = config.svgSize / 2;
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prevStep) => (prevStep + 1) % stepsData.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []); 
+
+  // Calculate the static positions for the numbered dots
+  const stepPositions = useMemo(() => {
+    const positions = [];
+    // Spreading 3 dots across the top of the semi-circle
+    const angles = [-135, -90, -45];
+    for (let i = 0; i < config.numSteps; i++) {
+      const angleDeg = angles[i];
+      const angleRad = angleDeg * (Math.PI / 180);
+      const x = centerX + config.arcRadius * Math.cos(angleRad);
+      const y = centerY + config.arcRadius * Math.sin(angleRad);
+      positions.push({ x, y, angle: angleDeg });
+    }
+    return positions;
+  }, [config.numSteps, centerX, centerY, config.arcRadius]);
+
+  // Animation loop for the moving line and active dot
+  useEffect(() => {
+    const targetAngle = stepPositions[activeStep].angle;
+    
+    let frameId;
+
+    const animate = () => {
+      const state = animationState.current;
+      const easingFactor = 0.05;
+      // Smoothly move the current angle towards the target
+      state.currentAngle += (targetAngle - state.currentAngle) * easingFactor;
+      
+      const currentAngleRad = state.currentAngle * (Math.PI / 180);
+      const x = centerX + config.arcRadius * Math.cos(currentAngleRad);
+      const y = centerY + config.arcRadius * Math.sin(currentAngleRad);
+
+      // Update the line's end point
+      if (lineRef.current) {
+        lineRef.current.setAttribute('x2', x);
+        lineRef.current.setAttribute('y2', y);
+      }
+      
+      // Update the active dot's position
+      if (activeDotRef.current) {
+        activeDotRef.current.setAttribute('transform', `translate(${x}, ${y})`);
+      }
+
+      frameId = requestAnimationFrame(animate);
+    };
+    
+    animate();
+
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, [activeStep, centerX, centerY, config.numSteps, config.arcRadius, stepPositions]);
+
+  const activeContent = stepsData[activeStep];
+  const foreignObjectSize = config.arcRadius * 0.9;
+  const foreignObjectX = centerX - foreignObjectSize / 2;
+  const foreignObjectY = centerY - foreignObjectSize / 1.5;
+  
+  // The line will start from a fixed point above the text block
+  const lineStartX = centerX;
+  const lineStartY = foreignObjectY + 30; // Positioned at the top of the text area
+
+  const arcPath = `M ${centerX - config.arcRadius},${centerY} A ${config.arcRadius},${config.arcRadius} 0 0 1 ${centerX + config.arcRadius},${centerY}`;
+
+  return (
+    <div className="w-full mx-auto flex flex-col items-center text-white">
+      <h2 className="text-4xl md:text-5xl font-bold mb-8 self-start text-left px-6">Our Approach</h2>
+      <div className="relative w-full h-[500px] flex flex-col items-center">
+        <svg viewBox={`0 0 ${config.svgSize} ${config.svgSize}`} className="w-full h-auto absolute -top-10" aria-hidden="true">
+          
+          {/* Static semi-circle path */}
+          <path 
+            d={arcPath} 
+            fill="none" stroke="rgba(255, 255, 255, 0.5)" strokeWidth="2" 
+          />
+
+          {/* Static numbered dots */}
+          {stepPositions.map((pos, index) => (
+            <g key={index} transform={`translate(${pos.x}, ${pos.y})`} className="cursor-pointer" onClick={() => setActiveStep(index)}>
+                <circle cx="0" cy="0" r={config.dotSize / 2} fill={activeStep === index ? "white" : "none"}
+                  stroke="white" strokeWidth={2}
+                  style={{transition: 'fill 0.3s ease'}}
+                />
+                <text x="0" y="0" textAnchor="middle" dominantBaseline="central" 
+                  fill={activeStep === index ? "#2c4e8a" : "white"} fontSize="14" fontWeight="bold"
+                  style={{transition: 'fill 0.3s ease'}}
+                  >
+                  {index + 1}
+                </text>
+            </g>
+          ))}
+
+          {/* Moving Line */}
+          <line
+            ref={lineRef}
+            x1={lineStartX} y1={lineStartY}
+            x2={centerX} y2={centerY - config.arcRadius}
+            stroke="white" strokeWidth="2"
+          />
+
+          {/* This dot is now part of the static dots logic, so this group is no longer needed */}
+          {/* <g ref={activeDotRef}> ... </g> */}
+
+          {/* Static Central Text */}
+          <foreignObject x={foreignObjectX} y={foreignObjectY} width={foreignObjectSize} height={foreignObjectSize}>
+             <div xmlns="http://www.w3.org/1999/xhtml" className="w-full h-full flex flex-col items-center justify-center text-center p-4">
+                <div key={activeContent.id} className="animate-fade-in">
+                    <h3 className="text-xl font-bold mb-3">{activeContent.title}</h3>
+                    <p className="text-base text-gray-200 leading-relaxed">{activeContent.description}</p>
+                </div>
+            </div>
+          </foreignObject>
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+// --- Your Original Home Component ---
 const Home = () => {
   return (
     <div className="home-page">
@@ -119,98 +285,86 @@ const Home = () => {
           <p>Evidence For Impact.</p>
         </div>
         <div className="data-points-header">
-        <p>
-          Hundreds of <span>data points</span>, dozens of
-          stories uncovered.
-        </p>
+          <p>
+            Hundreds of <span>data points</span>, dozens of stories uncovered.
+          </p>
         </div>
         <div className="data-cards">
           <div className="data-card">
             <img src={fingerprint} alt="Fingerprint Icon" />
-            <h3>Data Collection and Analysis</h3>
-            <p>
-              Advanced statistical models to interpret complex datasets and
-              provide clear, actionable intelligence.
-            </p>
+            <div>
+              <p className="data-points">Data Collection and Analysis</p>
+              <p className="data-points-p">
+                High-quality, context-driven data gathering and analysis.
+              </p>
+            </div>
           </div>
           <div className="data-card">
             <img src={ai} alt="AI Icon" />
-            <h3>Impact Evaluation</h3>
-            <p>
-              Rigorous methodologies to measure the true effect of programs and
-              policies, ensuring accountability.
-            </p>
+            <div>
+              <p className="data-points">Impact Evaluation</p>
+              <p className="data-points-p">
+                In-depth studies to understand trends, consumer behavior, &
+                economic conditions.
+              </p>
+            </div>
           </div>
           <div className="data-card">
             <img src={biotech} alt="Biotech Icon" />
-            <h3>Market Research</h3>
-            <p>
-              In-depth analysis of market trends, consumer behavior, and
-              competitive landscapes to inform strategy.
-            </p>
+            <div>
+              <p className="data-points">Market Research</p>
+              <p className="data-points-p">
+                Assessing program performance, effectiveness, and impact.
+              </p>
+            </div>
           </div>
           <div className="data-card">
             <img src={layers} alt="Layers Icon" />
-            <h3>Policy Research</h3>
-            <p>
-              Evidence-based research to support the development of effective
-              and equitable public policies.
-            </p>
+            <div>
+              <p className="data-points">Policy Research</p>
+              <p className="data-points-p">
+                Expert support to design practical, sustainable solutions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Next Level Section */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>Explore What We Offer.</p>
+      </div>
       <section className="next-level-section">
-        <div className="next-level-content">
-          <h2>The Next Level Of Data Collection – Together.</h2>
-          <p className="subtitle">For Impactful Insights.</p>
-          <p className="description">
-            Our collaborative platform brings together diverse data sources,
-            from satellite imagery to on-the-ground surveys. By integrating
-            technology with community engagement, we unlock deeper insights and
-            foster a more holistic understanding of the challenges and
-            opportunities at hand.
-          </p>
-        </div>
-        <div className="next-level-image">
-          {/* Placeholder for the graph image */}
-          <img
-            src="https://via.placeholder.com/500x350?text=Data+Visualization"
-            alt="Data Visualization Graph"
-          />
+        <div className="next-level-container">
+          <div className="next-level-content">
+            <p>The Next Level Of Data Collection – </p>
+            <p className="subtitle">Together</p>
+            <p className="subtitle">For Impactful Insights.</p>
+          </div>
+          <div className="next-level-subtitle">
+            <p className="description">
+              We offer comprehensive data collection services, including
+              <span> quantitative</span> methods such as face-to-face surveys,{" "}
+              <span>mobile-based surveys</span>, and <span>household</span>{" "}
+              surveys, as well as <span>qualitative</span> approaches like
+              interviews and focus group discussions.
+            </p>
+            <p className="description">
+              Our team is skilled in field team training and management, and we
+              prioritize <span>rigorous</span> data quality assurance to ensure
+              accurate and reliable results, tailoring our <span>unique</span>{" "}
+              processes.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Our Approach Section */}
-      <section className="our-approach-section">
-        <h2>Our Approach</h2>
-        <div className="approach-circle">
-          <div className="approach-circle-inner">
-            <div className="pointer p1">
-              <h3>Community-Centric Methods</h3>
-              <p>
-                Engaging directly with communities to ensure our research is
-                relevant and respectful.
-              </p>
-            </div>
-            <div className="pointer p2">
-              <h3>Data-Driven Strategies</h3>
-              <p>
-                Utilizing robust data to craft strategies that are effective and
-                evidence-based.
-              </p>
-            </div>
-            <div className="pointer p3">
-              <h3>Sustainable Impact</h3>
-              <p>
-                Focusing on long-term solutions that empower communities and
-                foster resilience.
-              </p>
-            </div>
-          </div>
-        </div>
+      <section className="approach-section-container bg-[#2c4e8a] overflow-hidden">
+        <AnimatedApproach />
       </section>
+
 
       {/* Research Wall Section */}
       <section className="research-wall-section">
@@ -311,3 +465,4 @@ const Home = () => {
 };
 
 export default Home;
+
