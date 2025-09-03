@@ -295,20 +295,6 @@ hero-paragraph {
     color: #185A91;
 }
 /* --- Our Approach Section --- */
-.approach-section-container {
-    background-color: #185A91;
-}
-
-  /* Rotation animation for the whole container */
-  .rotate {
-    animation: rotate 15s linear infinite;
-    transform-origin: center bottom;
-  }
-
-  @keyframes rotate {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
 
 /* --- Research Wall Section --- */
 .research-wall-section {
