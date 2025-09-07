@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
+import FAQSection from "./FAQs";
 
 // Import assets for the Home page
 import heroBg from "../assets/images/hero_bg.png";
-import educationImg from "../assets/images/Education.png";
-import healthImg from "../assets/images/Health.png";
-import societyImg from "../assets/images/Society.png";
-import arrowIcon from "../assets/icons/arrow_icon.png";
-import plusIcon from "../assets/icons/Plus.png";
+//import educationImg from "../assets/images/Education.png";
+//import healthImg from "../assets/images/Health.png";
+//import societyImg from "../assets/images/Society.png";
+//import arrowIcon from "../assets/icons/arrow_icon.png";
+//import plusIcon from "../assets/icons/Plus.png";
 import arrow from "../assets/icons/arrow_icon.png";
+import whitearrow from "../assets/icons/whitearrow.png";
 import blueBox from "../assets/icons/rectangle.png";
 import ai from "../assets/icons/Artificial Intelligence.png";
 import biotech from "../assets/icons/Biotech.png";
@@ -173,7 +175,8 @@ const Home = () => {
       <section className="next-level-section">
         <div className="next-level-container">
           <div className="next-level-content">
-            <p>The Next Level Of Data Collection – </p>
+            <p>The Next Level Of </p>
+            <p>Data Collection –</p>
             <p className="subtitle">Together</p>
             <p className="subtitle">For Impactful Insights.</p>
           </div>
@@ -198,84 +201,89 @@ const Home = () => {
       {/* Our Approach Section */}
 
       {/* Research Wall Section */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>Our Research Wall</p>
+      </div>
       <section className="research-wall-section">
         <div className="section-header">
-          <p className="subtitle-light">Our Research</p>
-          <h2>
-            Turning local <span className="highlight-blue">insight</span> into
-            powerful decisions through trusted research.
-          </h2>
+          <p>
+            Turning <span>local insight</span> into powerful decisions through{" "}
+            <span>trusted</span> research.
+          </p>
         </div>
         <div className="research-grid">
           <Link to="/education" className="research-item">
-            <img src={educationImg} alt="Education" />
-            <div className="research-item-overlay">
-              <h3>Education</h3>
+            <div className="research-item-container">
+              <div>
+                <p className="research-item-heading">Education</p>
+                <p className="research-item-p">
+                  {" "}
+                  Evaluating Learning Outcomes.{" "}
+                </p>
+              </div>
+              <div className="research-item-bottom">
+                <p>
+                  Research focused on education, social dynamics, and community
+                  challenges to support inclusive growth.
+                </p>
+                <img
+                  src={whitearrow}
+                  alt="Education"
+                  className="research-image"
+                />
+              </div>
             </div>
-            <img src={arrowIcon} className="arrow-icon" alt="Go" />
           </Link>
-          <div className="research-item">
-            <img src={healthImg} alt="Health" />
-            <div className="research-item-overlay">
-              <h3>Health</h3>
+          <Link to="/health" className="research-item health">
+            <div className="research-item-container">
+              <div>
+                <p className="research-item-heading">Health</p>
+                <p className="research-item-p">
+                  {" "}
+                  Studying health services and access.{" "}
+                </p>
+              </div>
+              <div className="research-item-bottom">
+                <p>
+                  Studies addressing public health issues, healthcare access,
+                  and health-related behaviors for better outcomes.
+                </p>
+                <img
+                  src={whitearrow}
+                  alt="Education"
+                  className="research-image"
+                />
+              </div>
             </div>
-            <img src={arrowIcon} className="arrow-icon" alt="Go" />
-          </div>
-          <div className="research-item">
-            <img src={societyImg} alt="Society" />
-            <div className="research-item-overlay">
-              <h3>Society</h3>
+          </Link>
+          <Link to="/health" className="research-item society">
+            <div className="research-item-container">
+              <div>
+                <p className="research-item-heading">Society</p>
+                <p className="research-item-p">
+                  {" "}
+                  Community needs and social issues.{" "}
+                </p>
+              </div>
+              <div className="research-item-bottom">
+                <p>
+                  Analysis of markets, evaluation of programs, and assessment of
+                  impacts to guide development improvement strategies.
+                </p>
+                <img
+                  src={whitearrow}
+                  alt="Education"
+                  className="research-image"
+                />
+              </div>
             </div>
-            <img src={arrowIcon} className="arrow-icon" alt="Go" />
-          </div>
+          </Link>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div className="faq-container">
-          <details className="faq-item">
-            <summary>
-              What types of data do you specialize in?
-              <img src={plusIcon} alt="Toggle" className="plus-icon" />
-            </summary>
-            <p>
-              We specialize in both quantitative and qualitative data, ranging
-              from large-scale surveys and econometric data to in-depth
-              interviews, focus groups, and ethnographic studies. Our expertise
-              lies in mixed-methods research that integrates different data
-              types for a comprehensive understanding.
-            </p>
-          </details>
-          <details className="faq-item">
-            <summary>
-              Which geographical regions do you cover?
-              <img src={plusIcon} alt="Toggle" className="plus-icon" />
-            </summary>
-            <p>
-              While we are a global network, our primary focus has been on
-              projects in Sub-Saharan Africa, Southeast Asia, and parts of Latin
-              America. However, our methodologies and network of researchers
-              allow us to conduct studies in a wide variety of contexts
-              worldwide.
-            </p>
-          </details>
-          <details className="faq-item">
-            <summary>
-              How do you ensure data quality and ethical standards?
-              <img src={plusIcon} alt="Toggle" className="plus-icon" />
-            </summary>
-            <p>
-              Data quality is paramount. We employ rigorous training for our
-              enumerators, multi-layered data verification processes, and pilot
-              testing of all instruments. Ethically, we adhere to strict IRB
-              standards, ensure informed consent, and prioritize the
-              confidentiality and anonymity of our participants.
-            </p>
-          </details>
-        </div>
-      </section>
+      <FAQSection />
 
       {/* Contact Section */}
       <section className="contact-section">
@@ -296,4 +304,3 @@ const Home = () => {
 };
 
 export default Home;
-
