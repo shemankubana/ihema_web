@@ -283,21 +283,55 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>All Your Questions, Answered.</p>
+      </div>
       <FAQSection />
 
       {/* Contact Section */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>Contact Us</p>
+      </div>
       <section className="contact-section">
-        <h2>We're Just a message away</h2>
-        <p>
-          Drop us a line and let's explore how we can help you achieve your
-          goals and make a difference.
-        </p>
-        <form className="contact-form">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <textarea placeholder="Message" rows="5" required></textarea>
-          <button type="submit">Send</button>
-        </form>
+        <div className="contact-section-container">
+          <div className="text">
+            <h2 className="contact-header">
+              We're Just a <span>message</span> away.
+            </h2>
+            <p>
+              Whether you are navigating complex challenges, seeking evidence to
+              inform smarter decisions, or ready to design impactful programs,
+              our expertise ensures you move forward with fresh & clear
+              insights.
+            </p>
+          </div>
+          <div className="form">
+            <form className="contact-form">
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+                <p>Name:</p>
+              </div>
+              <input type="text" placeholder="Enter your Name" required />
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+                <p>Email:</p>
+              </div>
+              <input type="email" placeholder="Enter your e-mail" required />
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+                <p>Message:</p>
+              </div>
+              <textarea
+                placeholder="Enter your message"
+                rows="5"
+                required
+              ></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
       </section>
     </div>
   );

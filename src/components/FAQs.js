@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Home.css";
-import blueBox from "../assets/icons/rectangle.png";
+//import blueBox from "../assets/icons/rectangle.png";
 import plusIcon from "../assets/icons/Plus.svg";
 
 const FAQSection = () => {
@@ -48,10 +48,6 @@ const FAQSection = () => {
 
   return (
     <section className="faq-section">
-      <div className="data-points-box">
-        <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>All Your Questions, Answered.</p>
-      </div>
       <p className="faq-header">
         Frequently <span className="highlight">Asked</span> Questions
       </p>
