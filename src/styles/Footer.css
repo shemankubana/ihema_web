@@ -1,127 +1,199 @@
+/* --- Original Footer Styles (with minor adjustments) --- */
 .footer {
-    background-color: #185A91;
-    color: white;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  background-color: #185A91;
+  color: white;
+  /* height: 400px; */ /* Replaced with padding for flexibility */
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  /* height: 300px; */ /* Replaced with padding for flexibility */
+  padding-bottom: 2rem;
+  width: 90%;
+  border-bottom: 0.1px solid white;
+}
+
+.footer-left {
+  /* This can be a flex container to align logo if needed */
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+.footer-logo {
+  height: 45px;
+}
+
+.footer-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-tagline {
+  font-size: 20px;
+  font-weight: 500; /* Medium is 500 */
+}
+
+.footer-pline {
+  font-size: 18px;
+  font-weight: 400; /* Regular is 400 */
+  color: #D0C9C9;
+}
+.footer-subscribe {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-subscribe input {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 49px;
+  width: 60%;
+  border-radius: 30px;
+  padding-left: 30px;
+  color: white; /* Add text color for input */
+}
+
+.footer-subscribe input::placeholder {
+  color: #C2BFBF;
+}
+
+.footer-subscribe button {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 49px;
+  width: 50px;
+  border-radius: 50%; /* Make it a perfect circle */
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.footer-right {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.footer-links-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-column p {
+  color: #C2BFBF;
+}
+.footer-address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer-links-column a {
+  text-decoration: none; /* Good practice to add this */
+  color: white;
+}
+
+.footer-links-column a:hover {
+  text-decoration: underline; /* Better hover effect */
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding-top: 1.5rem; /* Replaced fixed height */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 1rem;
+}
+
+.footer-social-links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-social-links a:hover {
+  text-decoration: underline;
+}
+.epique {
+  color: #D0C9C9;
+}
+
+/*
+==============================================
+--- RESPONSIVE STYLES ---
+==============================================
+*/
+
+/* --- Tablet Styles (up to 992px) --- */
+@media (max-width: 992px) {
   .footer-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    height: 300px;
-    width: 90%;
-    border-bottom: 0.1px solid white;
-  }
-  
-  .footer-left {
-    
-  }
-  
-  .footer-logo {
-    height: 45px;
-  }
-  
-  .footer-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack main sections vertically */
+    align-items: flex-start;
+    gap: 3rem;
   }
 
-  .footer-tagline {
-    font-size: 20px;
-    font-weight: Medium;
-  }
-  
-  .footer-pline {
-    font-size: 18px;
-    font-weight: Regular;
-    color: #D0C9C9;
-  }
-  .footer-subscribe {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .footer-subscribe input {
-    background-color: transparent;
-    border: 1px solid white;
-    height: 49px;
-    width: 60%;
-    border-radius: 30px ;
-    padding-left: 30px;
-  }
-
-  .footer-subscribe input::placeholder {
-    color: #C2BFBF;
-  }
-  
-  .footer-subscribe button {
-    background-color: transparent;
-    border: 1px solid white;
-    height: 49px;
-    width: 50px;
-    border-radius: 60px;
-    color: white;
-  }
-  
-  .footer-right {
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-  }
-  
-  .footer-links-column-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  .footer-links-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer-links-column p {
-    color: #C2BFBF;
-  }
-  .footer-address {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  .footer-links-column a {
-  }
-  
-  .footer-links-column a:hover {
-    color: white;
-  }
-  
-  .footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    height: 50px;
-  }
-  
+  .footer-form,
+  .footer-right,
   .footer-social-links {
-    width: 25%;
-    display: flex;
-    justify-content: space-between;
+    width: 100%; /* Allow sections to take full width */
   }
 
-  .footer-social-links a {
+  .footer-right {
+    justify-content: flex-start; /* Align link columns to the left */
+    gap: 4rem; /* Add space between link columns */
   }
-  
-  .footer-social-links a:hover {
-    color: white;
+}
+
+/* --- Mobile Styles (up to 768px) --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0;
   }
-  .epique {
-    color: #D0C9C9;
+
+  .footer-right {
+    flex-direction: column; /* Stack link columns vertically */
+    gap: 2rem;
   }
+
+  .footer-subscribe {
+    align-items: flex-start;
+  }
+
+  .footer-subscribe input {
+    width: 100%; /* Make input full width */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack copyright and links */
+    align-items: center; /* Center-align bottom content */
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-social-links {
+    justify-content: center; /* Center social links */
+    gap: 2rem;
+  }
+}

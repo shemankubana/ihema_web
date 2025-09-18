@@ -36,42 +36,46 @@ const Home = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h2>Empowering Decisions, Enabling Change.</h2>
-        </div>
-        <div className="second-hero-content">
-          <div className="text-container">
-            <div className="text">
-              <p className="heading-paragraph">Localised Research Expertise</p>
-              <p className="hero-paragraph">
-                Deep cultural understanding and field experience for accurate
-                insights.
-              </p>
-            </div>
-            <div className="text">
-              <p className="heading-paragraph">Timely, Actionable Data</p>
-              <p className="hero-paragraph">
-                Fast, high-quality analysis that supports evidence-based
-                decisions without delay.
-              </p>
-            </div>
-            <div className="text">
-              <p className="heading-paragraph">Community-Driven Solutions</p>
-              <p className="hero-paragraph">
-                Grounded in real-world conditions to deliver sustainable and
-                practical outcomes.
-              </p>
-            </div>
+        <div className="hero-container">
+          <div className="hero-content">
+            <h2>Empowering Decisions, Enabling Change.</h2>
           </div>
-          <div className="learn-more">
-            <p className="learn-more-p">Communities hold the truth </p>
-            <p className="learn-more-p">— we help bring it to light.</p>
-            <Link to="/get-involved" className="nav-actions-link">
-              <div className="nav-actions">
-                <p className="get-involved">Get Involved</p>
-                <img src={arrow} alt="" />
+          <div className="second-hero-content">
+            <div className="text-container">
+              <div className="text">
+                <p className="heading-paragraph">
+                  Localised Research Expertise
+                </p>
+                <p className="hero-paragraph">
+                  Deep cultural understanding and field experience for accurate
+                  insights.
+                </p>
               </div>
-            </Link>
+              <div className="text">
+                <p className="heading-paragraph">Timely, Actionable Data</p>
+                <p className="hero-paragraph">
+                  Fast, high-quality analysis that supports evidence-based
+                  decisions without delay.
+                </p>
+              </div>
+              <div className="text">
+                <p className="heading-paragraph">Community-Driven Solutions</p>
+                <p className="hero-paragraph">
+                  Grounded in real-world conditions to deliver sustainable and
+                  practical outcomes.
+                </p>
+              </div>
+            </div>
+            <div className="learn-more">
+              <p className="learn-more-p">Communities hold the truth </p>
+              <p className="learn-more-p">— we help bring it to light.</p>
+              <Link to="/get-involved" className="nav-actions-link">
+                <div className="nav-actions">
+                  <p className="get-involved">Get Involved</p>
+                  <img src={arrow} alt="" />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -309,18 +313,24 @@ const Home = () => {
           </div>
           <div className="form">
             <form className="contact-form">
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <img src={blueBox} alt="Blue Box" style={{ width: "10px" }} />
                 <p>Name:</p>
               </div>
               <input type="text" placeholder="Enter your Name" required />
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <img src={blueBox} alt="Blue Box" style={{ width: "10px" }} />
                 <p>Email:</p>
               </div>
               <input type="email" placeholder="Enter your e-mail" required />
-              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <img src={blueBox} alt="Blue Box" style={{width: "10px"}}/>
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <img src={blueBox} alt="Blue Box" style={{ width: "10px" }} />
                 <p>Message:</p>
               </div>
               <textarea

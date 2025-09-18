@@ -57,9 +57,9 @@
   font-weight: bold;
 }
 
-hero-paragraph {
+.hero-paragraph {
   font-size: 20px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .text {
@@ -96,7 +96,7 @@ hero-paragraph {
 }
 .get-involved {
   font-size: 19px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .learn-more-button {
@@ -116,7 +116,7 @@ hero-paragraph {
 
 /* --- Partners Section --- */
 .partners-section {
-  padding: 0rem 5%;
+  padding: 4rem 5%;
   text-align: center;
 }
 .partners-section > p {
@@ -145,7 +145,7 @@ hero-paragraph {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 700px;
+  gap: 4rem; /* Replaces fixed height for flexibility */
   padding-block: 30px;
 }
 .know-us-header {
@@ -183,16 +183,16 @@ hero-paragraph {
   gap: 3rem;
 }
 .partner-logos img {
-  height: 50px;
+  height: 40px; /* Standardize height slightly */
   transition: all 0.3s ease;
 }
 
 .wfp {
-  height: 100px !important;
+  height: 80px !important;
 }
 
 .master-card {
-  height: 70px !important;
+  height: 60px !important;
 }
 
 /* --- Data Points Section --- */
@@ -201,7 +201,7 @@ hero-paragraph {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 700px;
+  gap: 4rem; /* Replaces fixed height */
 }
 .data-points-section h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -212,7 +212,7 @@ hero-paragraph {
 .data-points-header {
   font-size: 55px;
   width: 100%;
-  padding: 5rem 5% !important;
+  padding: 0 5% !important; /* Adjusted padding */
 }
 
 .data-points-header p {
@@ -239,12 +239,17 @@ hero-paragraph {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px;
+  min-height: 250px;
   padding: 2rem;
   border-top: 1px solid #185a91;
   border-bottom: 1px solid #185a91;
   border-right: 1px solid #185a91;
 }
+/* Add a left border to the first card for consistency */
+.data-card:first-child {
+  border-left: 1px solid #185a91;
+}
+
 .data-points {
   font-size: 20px;
   font-weight: 500;
@@ -266,7 +271,7 @@ hero-paragraph {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 600px;
+  padding: 5rem 0; /* Replaces fixed height */
 }
 .next-level-container {
   align-items: center;
@@ -278,7 +283,7 @@ hero-paragraph {
 .next-level-content {
   width: 120%;
   font-size: 60px;
-  font-weight: medium;
+  font-weight: 500;
 }
 .subtitle {
   color: #a8a8a8;
@@ -290,7 +295,7 @@ hero-paragraph {
   flex-direction: column;
   gap: 40px;
   font-size: 18px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .description span {
@@ -305,7 +310,7 @@ hero-paragraph {
 }
 .section-header p {
   font-size: 40px;
-  font-weight: medium;
+  font-weight: 500;
   color: black;
 }
 
@@ -321,7 +326,7 @@ hero-paragraph {
 }
 
 .research-item {
-  background-image: url("/src/assets/images/Education.png");
+  background-image: url("../assets/images/Education.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -332,21 +337,16 @@ hero-paragraph {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
+  text-decoration: none; /* Add this to remove underline from Link */
 }
 .research-item:hover {
   transform: scale(1.05);
 }
 .health {
-  background-image: url("/src/assets/images/Health.png") !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("../assets/images/Health.png") !important;
 }
 .society {
-  background-image: url("/src/assets/images/Society.png") !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("../assets/images/Society.png") !important;
 }
 .research-item-container {
   width: 90%;
@@ -362,7 +362,7 @@ hero-paragraph {
 }
 .research-item-bottom p {
   font-size: 18px;
-  font-weight: medium;
+  font-weight: 500;
   color: white;
 }
 .research-item-bottom img {
@@ -376,83 +376,83 @@ hero-paragraph {
 }
 .research-item-p {
   font-size: 20px;
-  font-weight: medium;
+  font-weight: 500;
   color: white;
 }
 /* --- FAQ Section --- */
 .faq-section {
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .faq-header {
-    font-size: 50px;
-    font-weight: medium;
-    padding-block: 4%;
-  }
-  
-  .faq-header .highlight {
-    color: #185A91;
-  }
-  
-  .faq-container {
-    max-width: 70%;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .faq-item {
-    border: 1px solid #2a6edb;
-    border-radius: 8px;
-    margin: 0.8rem 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-question {
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    font-weight: Regular;
-    color: black;
-  }
-  
-  .faq-icon {
-    font-size: 1.5rem;
-    color: #2a6edb;
-    transition: transform 0.3s ease;
-  }
-  
-  .faq-item.open .faq-icon {
-    transform: rotate(180deg);
-  }
-  
-  .faq-answer {
-    padding: 0 1rem;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-  
-  .faq-answer p {
-    margin: 1rem 0;
-    color: #444;
-  }
-  
-  .load-more {
-    margin-top: 1.5rem;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: regular;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .plus-icon {
-    width: 47px;
-    height: 34px;
-  }
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.faq-header {
+  font-size: 50px;
+  font-weight: 500;
+  padding-block: 4%;
+}
+
+.faq-header .highlight {
+  color: #185A91;
+}
+
+.faq-container {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border: 1px solid #2a6edb;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 400;
+  color: black;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #2a6edb;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1rem;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.load-more {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-icon {
+  width: 47px;
+  height: 34px;
+}
 
 /* --- Contact Section --- */
 .contact-section {
@@ -461,7 +461,7 @@ hero-paragraph {
 }
 .contact-section-container {
   display: flex;
-  justify-content: space-around ;
+  justify-content: space-around;
   gap: 50px;
   text-align: left;
 }
@@ -479,7 +479,7 @@ hero-paragraph {
 }
 .contact-section p {
   font-size: 20px;
-  font-weight: regular;
+  font-weight: 400;
   width: 80%;
 }
 .form {
@@ -512,4 +512,177 @@ hero-paragraph {
 }
 .contact-form button:hover {
   background-color: #0056b3;
+}
+
+/*
+==============================================
+--- RESPONSIVE STYLES ---
+==============================================
+*/
+
+/* --- Tablet Styles (up to 992px) --- */
+@media (max-width: 992px) {
+  /* --- Hero Section --- */
+  .second-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .learn-more {
+    width: 100%;
+  }
+
+  /* --- Partners Section --- */
+  .know-us-subtitle {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .know-us-subtitle p {
+    width: 100%;
+  }
+
+  /* --- Next Level Section --- */
+  .next-level-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .next-level-content,
+  .next-level-subtitle {
+    width: 100%;
+  }
+
+  /* --- Contact Section --- */
+  .contact-section-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .contact-section p {
+    width: 100%;
+  }
+}
+
+/* --- Mobile Styles (up to 768px) --- */
+@media (max-width: 768px) {
+  /* --- General Font & Spacing Adjustments --- */
+  h1, h2, p {
+    line-height: 1.5; /* Improve readability */
+  }
+
+  /* --- Hero Section --- */
+    /* --- Hero Section --- */
+    .hero-content h2 {
+      font-size: 26px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 70vh;
+    }
+    .second-hero-content {
+        width: 100%;
+        text-align: left;
+    }
+  
+    /* NEW: Hide the three feature paragraphs on mobile */
+    .second-hero-content .text-container {
+        display: none;
+    }
+    
+    .learn-more-p {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+  
+    /* --- NEW: Styles for the Fixed "Get Involved" Button --- */
+    .hero-section .nav-actions-link {
+      display: block;
+      width: 100%;
+      padding-top: 40px;
+    }
+    
+    .hero-section .nav-actions {
+        background-color: white;
+        color: #0d2c49;
+        width: 100%;
+        border-radius: 50px; /* Fully rounded corners */
+        padding: 0.75rem 1rem;
+        justify-content: space-between; /* Space out text and icon */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .hero-section .nav-actions p {
+        color: #333; /* Dark text color */
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    .hero-section .nav-actions img {
+        width: 45px;
+    }
+
+  /* --- Partners Section --- */
+  .know-us-header p {
+    font-size: 28px;
+  }
+  .know-us-subtitle p {
+    font-size: 16px;
+  }
+
+  /* --- Data Points Section --- */
+  .data-points-header {
+    font-size: 32px;
+  }
+  .data-points-header p {
+    width: 100%;
+  }
+  .data-card {
+    border-left: 1px solid #185a91; /* Add left border to all cards on mobile */
+  }
+  .data-card:first-child {
+    border-left: 1px solid #185a91; /* Ensure it stays */
+  }
+
+  /* --- Next Level Section --- */
+  .next-level-content {
+    font-size: 40px;
+  }
+  .next-level-subtitle {
+    font-size: 16px;
+  }
+
+  /* --- Research Wall Section --- */
+  .section-header p {
+    font-size: 28px;
+  }
+  .research-item {
+    height: 450px; /* Reduce height for smaller screens */
+  }
+  .research-item-heading {
+    font-size: 32px;
+  }
+  .research-item-p {
+    font-size: 18px;
+  }
+  .research-item-bottom p {
+    font-size: 16px;
+  }
+
+  /* --- FAQ Section --- */
+  .faq-header {
+    font-size: 32px;
+  }
+  .faq-container {
+    max-width: 100%;
+  }
+
+  /* --- Contact Section --- */
+  .contact-header {
+    font-size: 32px;
+  }
+  .contact-section p {
+    font-size: 16px;
+  }
 }
