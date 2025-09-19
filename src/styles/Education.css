@@ -1,7 +1,7 @@
 /* --- Original Education Page Styles --- */
 .education-page .page-header {
-  padding: 150px 5% 80px 5%; /* More top padding to account for navbar */
-  background-color: #0d2c49;
+  padding: 150px 5% 80px 5%;
+  background-color: red;
   color: white;
   text-align: center;
 }
