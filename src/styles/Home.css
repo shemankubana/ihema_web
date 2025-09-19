@@ -24,7 +24,7 @@
 
 /* --- Hero Section --- */
 .hero-section {
-  min-height: 100vh;
+  height: 831px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -36,9 +36,17 @@
   padding-inline: 5%;
 }
 
+.hero-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .hero-content {
   position: relative;
-  max-width: 600px;
+  max-width: 100%;
   text-align: left;
 }
 
@@ -55,15 +63,19 @@
 .heading-paragraph {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 0.25rem;
 }
 
 .hero-paragraph {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: medium;
+  margin-top: -30px;
 }
 
-.text {
-  padding-bottom: 20px;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .hero-content h1 {
@@ -521,15 +533,38 @@
 */
 
 /* --- Tablet Styles (up to 992px) --- */
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   /* --- Hero Section --- */
   .second-hero-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
   }
-  .learn-more {
+
+  .text-container {
     width: 100%;
+  }
+
+  .heading-paragraph {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .hero-paragraph {
+    font-size: 16px;
+    font-weight: medium;
+    margin-top: -30px;
+  }
+
+  .learn-more {
+    width: 50%;
+  }
+
+  .learn-more-p {
+    font-size: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 30px;
   }
 
   /* --- Partners Section --- */
@@ -572,19 +607,24 @@
   /* --- Hero Section --- */
     /* --- Hero Section --- */
     .hero-content h2 {
-      font-size: 26px;
+      font-size: 30px;
     }
 
     .hero-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 70vh;
+      height: 60vh;
     }
     .second-hero-content {
         width: 100%;
         text-align: left;
     }
+
+    .learn-more {
+      width: 100% !important;
+    }
+    
   
     /* NEW: Hide the three feature paragraphs on mobile */
     .second-hero-content .text-container {
@@ -647,10 +687,23 @@
 
   /* --- Next Level Section --- */
   .next-level-content {
-    font-size: 40px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    width: 100% !important;
   }
+  
+  .next-level-container {
+    align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+}
+
+
   .next-level-subtitle {
     font-size: 16px;
+    width: 100%;
   }
 
   /* --- Research Wall Section --- */
@@ -680,9 +733,14 @@
 
   /* --- Contact Section --- */
   .contact-header {
-    font-size: 32px;
+    font-size: 30px;
   }
   .contact-section p {
     font-size: 16px;
+    width: 100%;
+  }
+
+  .contact-section-container {
+    flex-direction: column;
   }
 }

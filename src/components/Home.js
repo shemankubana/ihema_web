@@ -38,17 +38,14 @@ const Home = () => {
         <div className="hero-overlay"></div>
         <div className="hero-container">
           <div className="hero-content">
-            <h2>Empowering Decisions, Enabling Change.</h2>
+            <h2>Empowering Decisions,</h2>
+            <h2>Enabling Change.</h2>
           </div>
           <div className="second-hero-content">
             <div className="text-container">
               <div className="text">
-                <p className="heading-paragraph">
-                  Localised Research Expertise
-                </p>
-                <p className="hero-paragraph">
-                  Deep cultural understanding and field experience for accurate
-                  insights.
+                <p className="heading-paragraph">Localised Research Expertise</p>
+                <p className="hero-paragraph">Deep cultural understanding and field experience for accurate insights.
                 </p>
               </div>
               <div className="text">
