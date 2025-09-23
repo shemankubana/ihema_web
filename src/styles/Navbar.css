@@ -60,6 +60,25 @@
   transform-origin: bottom right;
 }
 
+/* Default dark navbar (white text) */
+.navbar .nav-link span {
+  color: white;
+}
+
+/* Light navbar (black text) */
+.navbar.light-theme .nav-link span {
+  color: black;
+}
+
+.white_arrow {
+  width: 180px;
+}
+
+.white_arrow:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
 .nav-link:hover::after,
 .nav-link.active::after { /* Also apply underline to active NavLink */
   transform: scaleX(1);

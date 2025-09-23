@@ -11,7 +11,7 @@ import heroBg from "../assets/images/hero_bg.png";
 //import arrowIcon from "../assets/icons/arrow_icon.png";
 //import plusIcon from "../assets/icons/Plus.png";
 import arrow from "../assets/icons/arrow_icon.png";
-import whitearrow from "../assets/icons/whitearrow.png";
+import whitearrow from "../assets/icons/arrow_icon.png";
 import blueBox from "../assets/icons/rectangle.png";
 import ai from "../assets/icons/Artificial Intelligence.png";
 import biotech from "../assets/icons/Biotech.png";
