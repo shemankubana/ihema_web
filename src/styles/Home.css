@@ -24,7 +24,7 @@
 
 /* --- Hero Section --- */
 .hero-section {
-  height: 831px;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -34,14 +34,16 @@
   justify-content: space-evenly;
   color: white;
   padding-inline: 5%;
+  padding-block: 120px 60px;
 }
 
 .hero-container {
   width: 100%;
-  height: 600px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 3rem;
 }
 
 .hero-content {
@@ -51,7 +53,7 @@
 }
 
 .hero-content h2 {
-  font-size: 45px;
+  font-size: clamp(30px, 5vw, 45px);
   font-weight: bold;
 }
 .second-hero-content {
@@ -61,13 +63,13 @@
   align-items: center;
 }
 .heading-paragraph {
-  font-size: 22px;
+  font-size: clamp(18px, 2.5vw, 22px);
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
 .hero-paragraph {
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: medium;
   margin-top: -30px;
 }
@@ -91,14 +93,15 @@
 }
 
 .learn-more {
-  width: 31%;
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .learn-more-p {
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px);
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -170,7 +173,7 @@
 }
 
 .know-us-header p {
-  font-size: 40px;
+  font-size: clamp(28px, 4vw, 40px);
   width: 100%;
 }
 
@@ -184,8 +187,8 @@
 }
 
 .know-us-subtitle p {
-  width: 45%;
-  font-size: 20px;
+  flex: 1;
+  font-size: clamp(16px, 2vw, 20px);
 }
 .partner-logos {
   display: flex;
@@ -222,13 +225,14 @@
 }
 
 .data-points-header {
-  font-size: 55px;
+  font-size: clamp(32px, 5vw, 55px);
   width: 100%;
   padding: 0 5% !important; /* Adjusted padding */
 }
 
 .data-points-header p {
-  width: 55%;
+  width: 100%;
+  max-width: 800px;
 }
 
 .data-points-box {
@@ -290,11 +294,12 @@
   width: 90%;
   display: flex;
   align-items: last baseline;
+  gap: 3rem;
 }
 
 .next-level-content {
-  width: 120%;
-  font-size: 60px;
+  flex: 1.2;
+  font-size: clamp(30px, 5vw, 60px);
   font-weight: 500;
 }
 .subtitle {
@@ -302,11 +307,11 @@
 }
 
 .next-level-subtitle {
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   font-weight: 500;
 }
 
@@ -321,7 +326,7 @@
   background-color: #ffffff;
 }
 .section-header p {
-  font-size: 40px;
+  font-size: clamp(28px, 4vw, 40px);
   font-weight: 500;
   color: black;
 }
@@ -342,6 +347,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 450px;
   height: 576px;
   border-radius: 13px;
   display: flex;
@@ -382,12 +388,12 @@
   height: 50px;
 }
 .research-item-heading {
-  font-size: 40px;
+  font-size: clamp(32px, 4vw, 40px);
   font-weight: bold;
   color: white;
 }
 .research-item-p {
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 20px);
   font-weight: 500;
   color: white;
 }
@@ -398,7 +404,7 @@
 }
 
 .faq-header {
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   font-weight: 500;
   padding-block: 4%;
 }
@@ -408,7 +414,8 @@
 }
 
 .faq-container {
-  max-width: 70%;
+  max-width: 900px;
+  width: 90%;
   margin: 0 auto;
   text-align: left;
 }
@@ -478,21 +485,22 @@
   text-align: left;
 }
 .contact-header {
-  font-size: 40px;
+  font-size: clamp(30px, 4vw, 40px);
   font-weight: 400;
 }
 .text {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex: 1;
 }
 .contact-header span {
   color: #185a91;
 }
 .contact-section p {
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 400;
-  width: 80%;
+  width: 100%;
 }
 .form {
   width: 100%;
@@ -532,39 +540,24 @@
 ==============================================
 */
 
-/* --- Tablet Styles (up to 992px) --- */
-@media (min-width: 768px) and (max-width: 1440px) {
-  /* --- Hero Section --- */
+/* --- Large Tablet/Small Desktop (769px to 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-section {
+    min-height: 90vh;
+  }
+
   .second-hero-content {
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .text-container {
     width: 100%;
   }
 
-  .heading-paragraph {
-    font-size: 26px;
-    font-weight: bold;
-  }
-  
-  .hero-paragraph {
-    font-size: 16px;
-    font-weight: medium;
-    margin-top: -30px;
-  }
-
   .learn-more {
-    width: 50%;
-  }
-
-  .learn-more-p {
-    font-size: 20px;
-  }
-
-  .hero-content h2 {
-    font-size: 30px;
+    max-width: 100%;
   }
 
   /* --- Partners Section --- */
@@ -572,8 +565,10 @@
     flex-direction: column;
     gap: 2rem;
   }
-  .know-us-subtitle p {
-    width: 100%;
+
+  /* --- Data Points Section --- */
+  .data-points-header p {
+    max-width: 100%;
   }
 
   /* --- Next Level Section --- */
@@ -582,9 +577,9 @@
     align-items: flex-start;
     gap: 3rem;
   }
-  .next-level-content,
-  .next-level-subtitle {
-    width: 100%;
+
+  .next-level-content {
+    flex: 1;
   }
 
   /* --- Contact Section --- */
@@ -592,155 +587,251 @@
     flex-direction: column;
     gap: 3rem;
   }
-  .contact-section p {
-    width: 100%;
-  }
 }
 
-/* --- Mobile Styles (up to 768px) --- */
-@media (max-width: 768px) {
-  /* --- General Font & Spacing Adjustments --- */
-  h1, h2, p {
-    line-height: 1.5; /* Improve readability */
+/* --- Tablet (481px to 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    min-height: 80vh;
+    padding-block: 100px 40px;
   }
 
-  /* --- Hero Section --- */
-    /* --- Hero Section --- */
-    .hero-content h2 {
-      font-size: 30px;
-    }
-
-    .hero-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 60vh;
-    }
-    .second-hero-content {
-        width: 100%;
-        text-align: left;
-    }
-
-    .learn-more {
-      width: 100% !important;
-    }
-    
-  
-    /* NEW: Hide the three feature paragraphs on mobile */
-    .second-hero-content .text-container {
-        display: none;
-    }
-    
-    .learn-more-p {
-      font-size: 24px;
-      margin-bottom: 0;
-    }
-  
-    /* --- NEW: Styles for the Fixed "Get Involved" Button --- */
-    .hero-section .nav-actions-link {
-      display: block;
-      width: 100%;
-      padding-top: 40px;
-    }
-    
-    .hero-section .nav-actions {
-        background-color: white;
-        color: #0d2c49;
-        width: 100%;
-        border-radius: 50px; /* Fully rounded corners */
-        padding: 0.75rem 1rem;
-        justify-content: space-between; /* Space out text and icon */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-  
-    .hero-section .nav-actions p {
-        color: #333; /* Dark text color */
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
-    
-    .hero-section .nav-actions img {
-        width: 45px;
-    }
-
-  /* --- Partners Section --- */
-  .know-us-header p {
-    font-size: 28px;
-  }
-  .know-us-subtitle p {
-    font-size: 16px;
+  .hero-container {
+    min-height: 400px;
   }
 
-  /* --- Data Points Section --- */
-  .data-points-header {
-    font-size: 32px;
-  }
-  .data-points-header p {
-    width: 100%;
-  }
-  .data-card {
-    border-left: 1px solid #185a91; /* Add left border to all cards on mobile */
-  }
-  .data-card:first-child {
-    border-left: 1px solid #185a91; /* Ensure it stays */
-  }
-
-  /* --- Next Level Section --- */
-  .next-level-content {
-    font-size: 30px;
-    padding-bottom: 20px;
-    width: 100% !important;
-  }
-  
-  .next-level-container {
-    align-items: center;
-    width: 90%;
-    display: flex;
+  .second-hero-content {
     flex-direction: column;
-    align-items: last baseline;
-}
+    align-items: flex-start;
+    gap: 2rem;
+  }
 
-
-  .next-level-subtitle {
-    font-size: 16px;
+  .text-container {
     width: 100%;
   }
 
-  /* --- Research Wall Section --- */
-  .section-header p {
-    font-size: 28px;
-  }
-  .research-item {
-    height: 450px; /* Reduce height for smaller screens */
-  }
-  .research-item-heading {
-    font-size: 32px;
-  }
-  .research-item-p {
-    font-size: 18px;
-  }
-  .research-item-bottom p {
-    font-size: 16px;
-  }
-
-  /* --- FAQ Section --- */
-  .faq-header {
-    font-size: 32px;
-  }
-  .faq-container {
+  .learn-more {
     max-width: 100%;
   }
 
-  /* --- Contact Section --- */
-  .contact-header {
-    font-size: 30px;
+  /* --- Partners Section --- */
+  .know-us-subtitle {
+    flex-direction: column;
+    gap: 2rem;
   }
-  .contact-section p {
-    font-size: 16px;
+
+  /* --- Data Points Section --- */
+  .data-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* --- Next Level Section --- */
+  .next-level-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .next-level-content {
+    flex: 1;
+  }
+
+  /* --- Research Grid --- */
+  .research-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .research-item {
+    height: 500px;
+  }
+
+  /* --- FAQ Section --- */
+  .faq-container {
+    width: 95%;
+  }
+
+  /* --- Contact Section --- */
+  .contact-section-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+/* --- Mobile Styles (up to 480px) --- */
+@media (max-width: 480px) {
+  /* --- General Adjustments --- */
+  .hero-section {
+    min-height: 100vh;
+    padding-block: 100px 30px;
+  }
+
+  .hero-container {
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .second-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /* Hide the three feature paragraphs on mobile */
+  .second-hero-content .text-container {
+    display: none;
+  }
+
+  .learn-more {
+    max-width: 100%;
+  }
+
+  /* Styles for the "Get Involved" Button on mobile */
+  .hero-section .nav-actions-link {
+    display: block;
     width: 100%;
+  }
+
+  .hero-section .nav-actions {
+    background-color: white;
+    color: #0d2c49;
+    width: 100%;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-section .nav-actions p {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .hero-section .nav-actions img {
+    width: 40px;
+  }
+
+  /* --- Partners Section --- */
+  .know-us-container {
+    gap: 3rem;
+  }
+
+  .know-us-subtitle {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .partner-logos {
+    gap: 2rem;
+  }
+
+  .partner-logos img {
+    height: 35px;
+  }
+
+  .wfp {
+    height: 70px !important;
+  }
+
+  .master-card {
+    height: 50px !important;
+  }
+
+  /* --- Data Points Section --- */
+  .data-points-section {
+    padding: 3rem 0;
+    gap: 3rem;
+  }
+
+  .data-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .data-card {
+    border-left: 1px solid #185a91;
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+
+  /* --- Next Level Section --- */
+  .next-level-section {
+    padding: 3rem 0;
+  }
+
+  .next-level-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .next-level-content {
+    flex: 1;
+  }
+
+  .next-level-subtitle {
+    gap: 20px;
+    flex: 1;
+  }
+
+  /* --- Research Wall Section --- */
+  .research-wall-section {
+    padding: 3rem 5%;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .research-item {
+    min-height: 400px;
+    height: 450px;
+  }
+
+  .research-item:hover {
+    transform: scale(1.02);
+  }
+
+  /* --- FAQ Section --- */
+  .faq-section {
+    padding: 3rem 1rem;
+  }
+
+  .faq-container {
+    width: 100%;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 0.85rem;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+  }
+
+  /* --- Contact Section --- */
+  .contact-section {
+    padding: 3rem 5%;
   }
 
   .contact-section-container {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .text {
+    gap: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
   }
 }

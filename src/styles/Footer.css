@@ -38,12 +38,12 @@
 }
 
 .footer-tagline {
-  font-size: 20px;
+  font-size: clamp(18px, 2.5vw, 20px);
   font-weight: 500; /* Medium is 500 */
 }
 
 .footer-pline {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   font-weight: 400; /* Regular is 400 */
   color: #D0C9C9;
 }
@@ -166,34 +166,103 @@
   }
 }
 
-/* --- Mobile Styles (up to 768px) --- */
-@media (max-width: 768px) {
+/* --- Tablet (481px to 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
   .footer {
     padding: 3rem 0;
   }
 
   .footer-right {
-    flex-direction: column; /* Stack link columns vertically */
+    flex-direction: column;
     gap: 2rem;
   }
 
-  .footer-subscribe {
-    align-items: flex-start;
-  }
-
   .footer-subscribe input {
-    width: 100%; /* Make input full width */
+    width: 80%;
   }
 
   .footer-bottom {
-    flex-direction: column; /* Stack copyright and links */
-    align-items: center; /* Center-align bottom content */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 1.5rem;
   }
 
   .footer-social-links {
-    justify-content: center; /* Center social links */
+    justify-content: center;
     gap: 2rem;
+  }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+
+  .footer-container {
+    width: 90%;
+    gap: 2.5rem;
+  }
+
+  .footer-logo {
+    height: 38px;
+  }
+
+  .footer-form {
+    gap: 15px;
+  }
+
+  .footer-tagline {
+    font-size: 18px;
+  }
+
+  .footer-pline {
+    font-size: 15px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .footer-links-column {
+    gap: 8px;
+  }
+
+  .footer-links-column-container {
+    gap: 30px;
+  }
+
+  .footer-subscribe {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .footer-subscribe input {
+    width: 100%;
+    height: 45px;
+    padding-left: 20px;
+  }
+
+  .footer-subscribe button {
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
