@@ -20,14 +20,16 @@
 
 .page-header p {
   color: black;
-  font-size: 28px;
-  width: 70%;
+  font-size: clamp(18px, 3vw, 28px);
+  width: 100%;
+  max-width: 800px;
 }
 
 .education-content {
   padding: 5rem 5%;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .education-content-container {
@@ -35,7 +37,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  font-size: 30px;
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .education-content > h2 {
@@ -47,10 +49,10 @@
 }
 
 .main-content-image {
-  width: 60%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 600px;
   border-radius: 8px;
-  margin-bottom: 4rem;
+  object-fit: cover;
 }
 
 .articles-grid {
@@ -110,28 +112,71 @@
 ==============================================
 */
 
-/* --- Mobile Styles (up to 768px) --- */
-@media (max-width: 768px) {
+/* --- Tablet (481px to 1024px) --- */
+@media (min-width: 481px) and (max-width: 1024px) {
   .education-page .page-header {
-    /* Reduce padding on mobile so content is visible sooner */
-    padding: 100px 5% 50px 5%;
+    padding: 130px 5% 60px 5%;
   }
 
-  .education-content {
-    /* Reduce vertical padding on mobile */
-    padding: 3rem 5%;
-  }
-
-  .page-header p {
-    font-size: 1rem; /* Slightly smaller text for small screens */
+  .education-content-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .main-content-image {
-    margin-bottom: 3rem; /* Adjust margin */
+    max-width: 100%;
   }
 
   .articles-grid {
-    /* Your grid is already responsive, but we can reduce the gap slightly */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+  }
+}
+
+/* --- Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+  .education-page .page-header {
+    padding: 100px 5% 40px 5%;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .education-content {
+    padding: 2.5rem 5%;
+    gap: 2rem;
+  }
+
+  .education-content-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .main-content-image {
+    max-width: 100%;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .article-card img {
+    height: 180px;
+  }
+
+  .article-card-content {
+    padding: 1.25rem;
+  }
+
+  .article-card-content h3 {
+    font-size: 1rem;
+  }
+
+  .full-report-link {
+    font-size: 0.9rem;
   }
 }

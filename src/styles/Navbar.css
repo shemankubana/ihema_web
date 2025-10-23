@@ -138,8 +138,16 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* Light theme hamburger */
+.navbar.light-theme .hamburger-menu .bar {
+    background-color: black;
+}
+
 /* --- Responsive Styles (for screens 768px wide or smaller) --- */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
 
     /* Show the hamburger menu icon on mobile */
     .hamburger-menu {
@@ -159,7 +167,7 @@
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        
+
         /* Hide the menu off-screen by default */
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
@@ -171,11 +179,10 @@
     }
 
     /* Hide the 'Get Involved' button on smaller screens to save space */
-    /* --- AFTER --- */
     .navbar .nav-actions-link {
       display: none;
     }
-    
+
     /* Animation for the hamburger icon when the menu is active (turns into an 'X') */
     .hamburger-menu.active .bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -185,5 +192,28 @@
     }
     .hamburger-menu.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.85rem 5%;
+    }
+
+    .navbar-logo {
+        height: 35px;
+    }
+
+    .right-container {
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 1.75rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
     }
 }
