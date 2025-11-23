@@ -371,7 +371,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 .research-item-bottom {
   display: flex;
@@ -411,32 +410,59 @@
   align-items: center;
   width: 90%;
   height: 500px;
+  margin-bottom: 50px;
 }
 
 .research-card {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 20px;
+  width: 100%;
+}
+
+.research-main {
+  display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+  width: 100%;
 }
 
 .research-card p{
   font-size: 17px;
   font-weight: Regular;
-  width: 80%;
+  width: 100%;
+  height: 90px;
 }
 
 .research-image {
-  width: 80%;
-  height: auto;
+  max-width: 300px;
+  width: 100%;
 }
 
 .full-report {
   width: 30%;
 }
 
-.researchborder {
-  height: 350px;
+.borderimage {
+  height: 400px;
+  color: #185A91;
+}
+
+/* About Us */
+.about-us {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  background-color: red;
 }
 
 /* --- FAQ Section --- */

@@ -25,10 +25,13 @@ import v37Logo from "../assets/logos/V37 1.png";
 import vsoLogo from "../assets/logos/VSO 1.png";
 import wfpLogo from "../assets/logos/WFP 1.png";
 import mscLogo from "../assets/logos/MSC 1.png";
-import researchimage from "../assets/images/Rectangle 45.png";
-import fullreport from "../assets/icons/Group 14.png";
+import researchimage from "../assets/images/Rectangle 45.svg";
+import researchimage2 from "../assets/images/Rectangle 60.svg";
+import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage4 from "../assets/images/Rectangle 62.svg";
+import fullreport from "../assets/images/Group 14.svg";
 import researchborder from "../assets/icons/Line 32.svg";
-
+import profileimg from "../assets/images/Rectangle 72.svg";
 
 // --- Your Original Home Component ---
 const Home = () => {
@@ -214,120 +217,105 @@ const Home = () => {
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>Our Research Wall</p>
       </div>
-      <section className="research-wall-section">
-        <div className="section-header">
-          <p>
-            Turning <span>local insight</span> into powerful decisions through{" "}
-            <span>trusted</span> research.
-          </p>
-        </div>
-        <div className="research-grid">
-          <Link to="/education" className="research-item">
-            <div className="research-item-container">
-              <div>
-                <p className="research-item-heading">Education</p>
-                <p className="research-item-p">
-                  {" "}
-                  Evaluating Learning Outcomes.{" "}
-                </p>
-              </div>
-              <div className="research-item-bottom">
-                <p>
-                  Research focused on education, social dynamics, and community
-                  challenges to support inclusive growth.
-                </p>
-                <img
-                  src={whitearrow}
-                  alt="Education"
-                  className="research-image"
-                />
-              </div>
-            </div>
-          </Link>
-          <Link to="/health" className="research-item health">
-            <div className="research-item-container">
-              <div>
-                <p className="research-item-heading">Health</p>
-                <p className="research-item-p">
-                  {" "}
-                  Studying health services and access.{" "}
-                </p>
-              </div>
-              <div className="research-item-bottom">
-                <p>
-                  Studies addressing public health issues, healthcare access,
-                  and health-related behaviors for better outcomes.
-                </p>
-                <img
-                  src={whitearrow}
-                  alt="Education"
-                  className="research-image"
-                />
-              </div>
-            </div>
-          </Link>
-          <Link to="/health" className="research-item society">
-            <div className="research-item-container">
-              <div>
-                <p className="research-item-heading">Society</p>
-                <p className="research-item-p">
-                  {" "}
-                  Community needs and social issues.{" "}
-                </p>
-              </div>
-              <div className="research-item-bottom">
-                <p>
-                  Analysis of markets, evaluation of programs, and assessment of
-                  impacts to guide development improvement strategies.
-                </p>
-                <img
-                  src={whitearrow}
-                  alt="Education"
-                  className="research-image"
-                />
-              </div>
-            </div>
-          </Link>
-        </div>
-      </section>
       <section className="research">
         <div className="research-container">
           <div className="research-card">
-            <p>
-              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-              Phase II Endline & Phase III Baseline
-            </p>
-            <img src={researchimage} alt="research image" className="research-image" />
-            <img src={fullreport} alt="full report" className="full-report" />
+            <div className="research-main">
+              <p>
+                USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+                Phase II Endline & Phase III Baseline
+              </p>
+              <img
+                src={researchimage}
+                alt="research image"
+                className="research-image"
+              />
+              <img src={fullreport} alt="full report" className="full-report" />
+            </div>
+            <div className="right-border">
+              <img src={researchborder} alt="border" className="borderimage" />
+            </div>
           </div>
-          <div>
-                      <img src={researchborder} alt="research border" className="researchborder" />
+          <div className="research-card">
+            <div className="research-main">
+              <p>
+                Rapid review of the Mastercard Foundation COVID-19 Recovery and
+                Resilience Program (CRRP Rwanda)
+              </p>
+              <img
+                src={researchimage2}
+                alt="research image"
+                className="research-image"
+              />
+              <img src={fullreport} alt="full report" className="full-report" />
+            </div>
+            <div className="right-border">
+              <img src={researchborder} alt="border" className="borderimage" />
+            </div>
+          </div>
+          <div className="research-card">
+            <div className="research-main">
+              <p>
+                Impact study of World Vision Rwanda programs focusing on
+                community development and educational initiatives
+              </p>
+              <img
+                src={researchimage3}
+                alt="research image"
+                className="research-image"
+              />
+              <img src={fullreport} alt="full report" className="full-report" />
+            </div>
+            <div className="right-border">
+              <img src={researchborder} alt="border" className="borderimage" />
+            </div>
+          </div>
+          <div className="research-card">
+            <div className="research-main">
+              <p>
+                USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+                Phase II Midterm Evaluation
+              </p>
+              <img
+                src={researchimage4}
+                alt="research image"
+                className="research-image"
+              />
+              <img src={fullreport} alt="full report" className="full-report" />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* About Us */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>About Us</p>
+      </div>
+      <section className="about-us">
+        <div className="about-us-container">
+        <div className="paragraph">
+          <p>Meet the professionals behind our success.</p>
+        </div>
+        <div className="profiles">
+          <div className="profile-card">
+            <div>
+              <p>[ + ] Justin TUYIRINGIRE</p>
+              <p>Chairperson</p>
+            </div>
+            <div>
+              <p>
+                With obtuse extensive experience in research management and
+                evaluation, Justin ensures impactful results and oversees the
+                governance of IHEMA Research Team Ltd.
+              </p>
+            </div>
+            <div className="profile-image">
+              <img src={profileimg} alt="White Arrow" />
+            </div>
+            <div className="heading-about-us"></div>
           </div>
-          <div className="research-card">
-            <p>
-              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-              Phase II Endline & Phase III Baseline
-            </p>
-            <img src={researchimage} alt="research image" className="research-image" />
-            <img src={fullreport} alt="full report" className="full-report" />
-          </div>
-          <div className="research-card">
-            <p>
-              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-              Phase II Endline & Phase III Baseline
-            </p>
-            <img src={researchimage} alt="research image" className="research-image" />
-            <img src={fullreport} alt="full report" className="full-report" />
-          </div>
-          <div className="research-card">
-            <p>
-              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-              Phase II Endline & Phase III Baseline
-            </p>
-            <img src={researchimage} alt="research image" className="research-image" />
-            <img src={fullreport} alt="full report" className="full-report" />
-          </div>
+        </div>
         </div>
       </section>
 
