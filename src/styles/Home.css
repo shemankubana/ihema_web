@@ -459,10 +459,55 @@
 
 .about-us-container {
   display: flex;
-  align-items: center;
+  align-items: last baseline;
   justify-content: center;
+  gap: 2%;
   width: 90%;
-  background-color: red;
+  margin-bottom: 50px;
+}
+
+.about-us-paragraph{
+  font-size: 50px;
+  font-weight: Medium;
+  width: 60%;
+}
+.about-us-paragraph span {
+  color: #185a91;
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  width: 100%;
+}
+
+.profile-card {
+  width: 100%;
+}
+
+.about-us-name {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.about-us-role {
+  color: #185a91;
+  margin-bottom: 20px;
+}
+
+.about-us-des {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.readmore {
+  margin-block: 20px;
+  width: 25%;
+}
+
+.profile-image {
+  width: 100%;
 }
 
 /* --- FAQ Section --- */

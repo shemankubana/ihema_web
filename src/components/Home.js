@@ -32,6 +32,8 @@ import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/Group 14.svg";
 import researchborder from "../assets/icons/Line 32.svg";
 import profileimg from "../assets/images/Rectangle 72.svg";
+import readmore from "../assets/images/Group 31-2.svg";
+import profileimg2 from "../assets/images/Rectangle 73.svg";
 
 // --- Your Original Home Component ---
 const Home = () => {
@@ -294,28 +296,57 @@ const Home = () => {
       </div>
       <section className="about-us">
         <div className="about-us-container">
-        <div className="paragraph">
-          <p>Meet the professionals behind our success.</p>
-        </div>
-        <div className="profiles">
-          <div className="profile-card">
-            <div>
-              <p>[ + ] Justin TUYIRINGIRE</p>
-              <p>Chairperson</p>
-            </div>
-            <div>
-              <p>
-                With obtuse extensive experience in research management and
-                evaluation, Justin ensures impactful results and oversees the
-                governance of IHEMA Research Team Ltd.
-              </p>
-            </div>
-            <div className="profile-image">
-              <img src={profileimg} alt="White Arrow" />
-            </div>
-            <div className="heading-about-us"></div>
+          <div className="about-us-paragraph">
+            <p>
+              Meet the <span>professionals</span> behind our success.
+            </p>
           </div>
-        </div>
+          <div className="profiles">
+            <div className="profile-card">
+              <div>
+                <p className="about-us-name">[ + ] Justin TUYIRINGIRE</p>
+                <p className="about-us-role">Chairperson</p>
+              </div>
+              <div>
+                <p className="about-us-des">
+                  With obtuse extensive experience in research management and
+                  evaluation, Justin ensures impactful results and oversees the
+                  governance of IHEMA Research Team Ltd.
+                </p>
+                <img src={readmore} alt="Readmore" className="readmore" />
+              </div>
+              <div>
+                <img
+                  src={profileimg}
+                  alt="White Arrow"
+                  className="profile-image"
+                />
+              </div>
+              <div className="heading-about-us"></div>
+            </div>
+            <div className="profile-card">
+              <div>
+                <p className="about-us-name">[ + ] Darya MUTETERI</p>
+                <p className="about-us-role">Managing Director</p>
+              </div>
+              <div>
+                <p className="about-us-des">
+                  Skilled in qualitative and quantitative research, she has led
+                  major evaluations, including the Mastercard Foundation CRRP
+                  review and USDA McGovern-Dole HGSF programs.
+                </p>
+                <img src={readmore} alt="Readmore" className="readmore" />
+              </div>
+              <div>
+                <img
+                  src={profileimg2}
+                  alt="profile image"
+                  className="profile-image"
+                />
+              </div>
+              <div className="heading-about-us"></div>
+            </div>
+          </div>
         </div>
       </section>
 
