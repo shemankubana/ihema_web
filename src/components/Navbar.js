@@ -5,7 +5,7 @@ import '../styles/Navbar.css';
 // Assets
 import logoWhite from '../assets/icons/Logo.png';
 import logoBlack from '../assets/images/logo_black.svg';
-import ellipse from '../assets/icons/Ellipse.png';
+import ellipse from '../assets/icons/Ellipse 4.svg';
 import arrowWhite from '../assets/icons/arrow_icon.png';
 import arrowBlack from '../assets/icons/arrow-blue.svg';
 import arrowWhiteButton from '../assets/icons/Group 12.svg';

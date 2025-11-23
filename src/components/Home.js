@@ -25,6 +25,10 @@ import v37Logo from "../assets/logos/V37 1.png";
 import vsoLogo from "../assets/logos/VSO 1.png";
 import wfpLogo from "../assets/logos/WFP 1.png";
 import mscLogo from "../assets/logos/MSC 1.png";
+import researchimage from "../assets/images/Rectangle 45.png";
+import fullreport from "../assets/icons/Group 14.png";
+import researchborder from "../assets/icons/Line 32.svg";
+
 
 // --- Your Original Home Component ---
 const Home = () => {
@@ -44,8 +48,12 @@ const Home = () => {
           <div className="second-hero-content">
             <div className="text-container">
               <div className="text">
-                <p className="heading-paragraph">Localised Research Expertise</p>
-                <p className="hero-paragraph">Deep cultural understanding and field experience for accurate insights.
+                <p className="heading-paragraph">
+                  Localised Research Expertise
+                </p>
+                <p className="hero-paragraph">
+                  Deep cultural understanding and field experience for accurate
+                  insights.
                 </p>
               </div>
               <div className="text">
@@ -280,6 +288,46 @@ const Home = () => {
               </div>
             </div>
           </Link>
+        </div>
+      </section>
+      <section className="research">
+        <div className="research-container">
+          <div className="research-card">
+            <p>
+              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+              Phase II Endline & Phase III Baseline
+            </p>
+            <img src={researchimage} alt="research image" className="research-image" />
+            <img src={fullreport} alt="full report" className="full-report" />
+          </div>
+          <div>
+                      <img src={researchborder} alt="research border" className="researchborder" />
+
+          </div>
+          <div className="research-card">
+            <p>
+              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+              Phase II Endline & Phase III Baseline
+            </p>
+            <img src={researchimage} alt="research image" className="research-image" />
+            <img src={fullreport} alt="full report" className="full-report" />
+          </div>
+          <div className="research-card">
+            <p>
+              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+              Phase II Endline & Phase III Baseline
+            </p>
+            <img src={researchimage} alt="research image" className="research-image" />
+            <img src={fullreport} alt="full report" className="full-report" />
+          </div>
+          <div className="research-card">
+            <p>
+              USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+              Phase II Endline & Phase III Baseline
+            </p>
+            <img src={researchimage} alt="research image" className="research-image" />
+            <img src={fullreport} alt="full report" className="full-report" />
+          </div>
         </div>
       </section>
 
