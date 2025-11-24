@@ -1,0 +1,44 @@
+.research-page {
+  margin-top: 9%;
+  padding-inline: 5%;
+}
+.research-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+
+.inner-research {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-heading {
+  color: #034f81;
+  font-size: 30px;
+  font-weight: medium;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.partnership {
+  font-size: 18px;
+  font-weight: 400;
+  color: #185a91;
+}
+
+.research-heading .date {
+  color: #000000;
+}
+
+.research-heading .partnership {
+  color: #185a91;
+}
+
+.content-pointer {
+    width: 100%;
+}

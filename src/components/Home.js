@@ -215,6 +215,7 @@ const Home = () => {
       {/* Our Approach Section */}
 
       {/* Research Wall Section */}
+      {/* Research Wall Section */}
       <div className="data-points-box">
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>Our Research Wall</p>
@@ -232,7 +233,13 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <img src={fullreport} alt="full report" className="full-report" />
+              <Link to="/USDA McGovern-Dole Grant">
+                <img
+                  src={fullreport}
+                  alt="full report"
+                  className="full-report"
+                />
+              </Link>
             </div>
             <div className="right-border">
               <img src={researchborder} alt="border" className="borderimage" />
@@ -249,7 +256,13 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <img src={fullreport} alt="full report" className="full-report" />
+              <Link to="/Rapid review of the Mastercard Foundation">
+                <img
+                  src={fullreport}
+                  alt="full report"
+                  className="full-report"
+                />
+              </Link>
             </div>
             <div className="right-border">
               <img src={researchborder} alt="border" className="borderimage" />
@@ -266,7 +279,13 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <img src={fullreport} alt="full report" className="full-report" />
+              <Link to="/Impact study of World Vision">
+                <img
+                  src={fullreport}
+                  alt="full report"
+                  className="full-report"
+                />
+              </Link>
             </div>
             <div className="right-border">
               <img src={researchborder} alt="border" className="borderimage" />
@@ -283,7 +302,13 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <img src={fullreport} alt="full report" className="full-report" />
+              <Link to="/USDA McGovern-Dole Grant">
+                <img
+                  src={fullreport}
+                  alt="full report"
+                  className="full-report"
+                />
+              </Link>
             </div>
           </div>
         </div>

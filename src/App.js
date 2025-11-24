@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Education from './components/Education'; // Assuming you still want this page
+import Research1 from './components/Research1';
+import Research2 from './components/Research2';
+import Research3 from './components/Research3';
+import Research4 from './components/Research4';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './App.css';
@@ -14,8 +17,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/education" element={<Education />} />
-            {/* You can add other routes like /about, /research etc. here */}
+            <Route path="/USDA McGovern-Dole Grant" element={<Research1 />} />
+            <Route path="/Rapid review of the Mastercard Foundation" element={<Research2 />} />
+            <Route path="/Impact study of World Vision" element={<Research3 />} />
+            <Route path="/USDA McGovern-Dole Grant Midterm" element={<Research4 />} />
           </Routes>
         </main>
         <Footer />

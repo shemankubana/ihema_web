@@ -444,6 +444,7 @@
 
 .full-report {
   width: 30%;
+  cursor: pointer;
 }
 
 .borderimage {
