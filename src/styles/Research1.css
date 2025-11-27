@@ -1,5 +1,6 @@
 .research-page {
   margin-top: 9%;
+  margin-bottom: 5%;
   padding-inline: 5%;
 }
 .research-heading-container {
@@ -31,6 +32,12 @@
   color: #185a91;
 }
 
+.Research1-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .research-heading .date {
   color: #000000;
 }
@@ -41,4 +48,74 @@
 
 .content-pointer {
     width: 100%;
+}
+
+.content-container {
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 13px;
+}
+.content-paragraph {
+  padding: 3%;
+  font-size: 20px;
+  color: black;
+}
+
+.content-image {
+  padding: 3%;
+  width: 100%;
+}
+
+.analytics {
+  padding: 2%;
+  width: 100%;
+}
+
+.more-assessments{
+  margin-left: 1.5%;
+  color: #185A91;
+  font-size: 20px;
+}
+
+.research-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.research-card-paragraph {
+  align-content: last baseline;
+  font-size: 22px !important;
+  width: 90% !important;
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: first baseline;
+}
+
+.full-report {
+  width: 100%;
+}
+
+.research-card-border {
+  height: 600px;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 1.5%;
 }

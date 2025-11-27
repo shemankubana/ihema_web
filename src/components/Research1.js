@@ -9,8 +9,12 @@ import arrowWhite from "../assets/icons/arrow_icon.png";
 import arrowBlack from "../assets/icons/arrow-blue.svg";
 import arrowWhiteButton from "../assets/icons/Group 12.svg";
 import headerborder from "../assets/images/bordder-line.svg";
-import content from "../assets/images/Group 32.svg";
-
+import content from "../assets/images/content.svg";
+import analytics from "../assets/images/Research1_analytics.svg";
+import { image } from "framer-motion/client";
+import researchcardimage from "../assets/images/Rectangle 60.svg";
+import fullreport from "../assets/images/full-report.svg";
+import reasearchcardborder from "../assets/images/research-card-border.svg";
 
 const Research1 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -91,9 +95,83 @@ const Research1 = () => {
           </div>
         </div>
         <div className="content-container">
-            <div className="content-pointers">
-                <img src={content} alt="contentpointer" className="content-pointer"/>
+          <p className="content-paragraph">
+            Representing the culmination of IHEMA Research Team's sustained
+            engagement with Rwanda's Home Grown School Feeding Program, this
+            comprehensive evaluation project combined endline assessment of
+            Phase II with baseline establishment for Phase III—a complex
+            dual-purpose evaluation requiring sophisticated methodological
+            design to ensure comparability across program phases while adapting
+            to evolving program strategies and contexts. This project
+            demonstrated our organization's maturation from a newly established
+            consultancy to a trusted evaluation partner capable of managing
+            large-scale, multi-component evaluations over extended timeframes
+            while maintaining consistently high-quality deliverables.
+          </p>
+          <img src={content} alt="content" className="content-image" />
+          <img src={analytics} alt="Analytics" className="analytics" />
+        </div>
+        <div className="research-card-container">
+          <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />
+          <div className="outer-container">
+            <p className="more-assessments">More Assessments</p>
+            <div className="cards-container">
+              <div className="research-card">
+                <p className="research-card-paragraph">
+                  Rapid review of the Mastercard Foundation COVID-19 Recovery
+                  and Resilience Program (CRRP Rwanda)
+                </p>
+                <img
+                  src={researchcardimage}
+                  alt="research-card"
+                  className="research-card-image"
+                />
+                <Link to="/research2" className="read-more-link">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report"
+                  />
+                </Link>
+              </div>
+              <div className="research-card">
+                <p className="research-card-paragraph">
+                  Rapid review of the Mastercard Foundation COVID-19 Recovery
+                  and Resilience Program (CRRP Rwanda)
+                </p>
+                <img
+                  src={researchcardimage}
+                  alt="research-card"
+                  className="research-card-image"
+                />
+                <Link to="/research2" className="read-more-link">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report"
+                  />
+                </Link>
+              </div>
+              <div className="research-card">
+                <p className="research-card-paragraph">
+                  Rapid review of the Mastercard Foundation COVID-19 Recovery
+                  and Resilience Program (CRRP Rwanda)
+                </p>
+                <img
+                  src={researchcardimage}
+                  alt="research-card"
+                  className="research-card-image"
+                />
+                <Link to="/research2" className="read-more-link">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report"
+                  />
+                </Link>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
