@@ -45,19 +45,25 @@ const Research1 = () => {
 
           {/* Nav links */}
           <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            {["services", "approach", "research", "faq", "contact"].map(
-              (path) => (
-                <NavLink
-                  key={path}
-                  to={`/${path}`}
+            {[
+              { name: 'Services', path: '/#services' },
+              { name: 'Approach', path: '/#approach' },
+              { name: 'Research', path: '/#research' },
+              { name: 'FAQ', path: '/#faq' },
+              { name: 'Contact', path: '/#contact' },
+            ].map(
+              (item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
                   className="nav-link"
                   onClick={closeMenu}
                 >
                   <span className="dark-text">
-                    {path.charAt(0).toUpperCase() + path.slice(1)}
+                    {item.name}
                   </span>
                   <img src={ellipse} className="ellipse" alt="" />
-                </NavLink>
+                </Link>
               )
             )}
           </div>
@@ -108,6 +114,9 @@ const Research1 = () => {
             large-scale, multi-component evaluations over extended timeframes
             while maintaining consistently high-quality deliverables.
           </p>
+          <p>
+            The dual endline-baseline design presented unique methodological challenges that required careful consideration. Endline evaluations measure program impact by comparing final outcomes against initial baselines, requiring meticulous attention to measurement consistency to ensure valid comparisons. Simultaneously, baseline evaluations establish the starting point for new program phases, requiring forward-looking measurement strategies that anticipate program theory changes and emerging evaluation questions. IHEMA Research Team navigated these competing demands by developing evaluation protocols that maintained methodological continuity where appropriate for longitudinal comparison while introducing innovative measurement approaches for new Phase III components and priorities.
+          </p>
           <img src={content} alt="content" className="content-image" />
           <img src={analytics} alt="Analytics" className="analytics" />
         </div>
@@ -126,7 +135,7 @@ const Research1 = () => {
                   alt="research-card"
                   className="research-card-image"
                 />
-                <Link to="/research2" className="read-more-link">
+                <Link to="/research/mastercard-foundation" className="read-more-link">
                   <img
                     src={fullreport}
                     alt="full report"
@@ -136,15 +145,15 @@ const Research1 = () => {
               </div>
               <div className="research-card">
                 <p className="research-card-paragraph">
-                  Rapid review of the Mastercard Foundation COVID-19 Recovery
-                  and Resilience Program (CRRP Rwanda)
+                  Impact study of World Vision Rwanda programs focusing on
+                  community development and educational initiatives
                 </p>
                 <img
                   src={researchcardimage}
                   alt="research-card"
                   className="research-card-image"
                 />
-                <Link to="/research2" className="read-more-link">
+                <Link to="/research/world-vision" className="read-more-link">
                   <img
                     src={fullreport}
                     alt="full report"
@@ -154,15 +163,15 @@ const Research1 = () => {
               </div>
               <div className="research-card">
                 <p className="research-card-paragraph">
-                  Rapid review of the Mastercard Foundation COVID-19 Recovery
-                  and Resilience Program (CRRP Rwanda)
+                  USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+                  Phase II Midterm Evaluation
                 </p>
                 <img
                   src={researchcardimage}
                   alt="research-card"
                   className="research-card-image"
                 />
-                <Link to="/research2" className="read-more-link">
+                <Link to="/research/mcgovern-dole-midterm" className="read-more-link">
                   <img
                     src={fullreport}
                     alt="full report"

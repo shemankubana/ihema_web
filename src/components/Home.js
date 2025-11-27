@@ -91,7 +91,7 @@ const Home = () => {
       </header>
 
       {/* Partners Section */}
-      <section className="partners-section">
+      <section className="partners-section" id="approach">
         <div className="know-us-container">
           <div className="get-to-know">
             <img src={blueBox} alt="Blue Box" className="blue-box" />
@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       {/* Data Points Section */}
-      <section className="data-points-section">
+      <section className="data-points-section" id="services">
         <div className="data-points-box">
           <img src={blueBox} alt="Blue Box" className="blue-box" />
           <p>Evidence For Impact.</p>
@@ -220,9 +220,9 @@ const Home = () => {
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>Our Research Wall</p>
       </div>
-      <section className="research">
+      <section className="research" id="research">
         <div className="research-container">
-          <div className="research-card">
+          <div className="research-card-list">
             <div className="research-main">
               <p>
                 USDA McGovern-Dole Grant: Home Grown School Feeding Program -
@@ -233,7 +233,7 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <Link to="/USDA McGovern-Dole Grant">
+              <Link to="/research/mcgovern-dole">
                 <img
                   src={fullreport}
                   alt="full report"
@@ -241,11 +241,9 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="right-border">
-              <img src={researchborder} alt="border" className="borderimage" />
-            </div>
+            <img src={researchborder} alt="research border" className="research-border" />
           </div>
-          <div className="research-card">
+          <div className="research-card-list">
             <div className="research-main">
               <p>
                 Rapid review of the Mastercard Foundation COVID-19 Recovery and
@@ -256,7 +254,7 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <Link to="/Rapid review of the Mastercard Foundation">
+              <Link to="/research/mastercard-foundation">
                 <img
                   src={fullreport}
                   alt="full report"
@@ -264,11 +262,9 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="right-border">
-              <img src={researchborder} alt="border" className="borderimage" />
-            </div>
+            <img src={researchborder} alt="research border" className="research-border" />
           </div>
-          <div className="research-card">
+          <div className="research-card-list">
             <div className="research-main">
               <p>
                 Impact study of World Vision Rwanda programs focusing on
@@ -279,7 +275,7 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <Link to="/Impact study of World Vision">
+              <Link to="/research/world-vision">
                 <img
                   src={fullreport}
                   alt="full report"
@@ -287,11 +283,9 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="right-border">
-              <img src={researchborder} alt="border" className="borderimage" />
-            </div>
+            <img src={researchborder} alt="research border" className="research-border" />
           </div>
-          <div className="research-card">
+          <div className="research-card-list">
             <div className="research-main">
               <p>
                 USDA McGovern-Dole Grant: Home Grown School Feeding Program -
@@ -302,7 +296,7 @@ const Home = () => {
                 alt="research image"
                 className="research-image"
               />
-              <Link to="/USDA McGovern-Dole Grant">
+              <Link to="/research/mcgovern-dole-midterm">
                 <img
                   src={fullreport}
                   alt="full report"
@@ -380,14 +374,16 @@ const Home = () => {
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>All Your Questions, Answered.</p>
       </div>
-      <FAQSection />
+      <div id="faq">
+        <FAQSection />
+      </div>
 
       {/* Contact Section */}
       <div className="data-points-box">
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>Contact Us</p>
       </div>
-      <section className="contact-section">
+      <section className="contact-section" id="contact">
         <div className="contact-section-container">
           <div className="text">
             <h2 className="contact-header">

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Research1 from './components/Research1';
 import Research2 from './components/Research2';
@@ -9,18 +9,36 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './App.css';
 
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <div className="App">
         <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/USDA McGovern-Dole Grant" element={<Research1 />} />
-            <Route path="/Rapid review of the Mastercard Foundation" element={<Research2 />} />
-            <Route path="/Impact study of World Vision" element={<Research3 />} />
-            <Route path="/USDA McGovern-Dole Grant Midterm" element={<Research4 />} />
+            <Route path="/research/mcgovern-dole" element={<Research1 />} />
+            <Route path="/research/mastercard-foundation" element={<Research2 />} />
+            <Route path="/research/world-vision" element={<Research3 />} />
+            <Route path="/research/mcgovern-dole-midterm" element={<Research4 />} />
           </Routes>
         </main>
         <Footer />

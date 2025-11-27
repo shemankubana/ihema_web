@@ -45,18 +45,24 @@ const Navbar = () => {
 
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          {['services', 'approach', 'research', 'faq', 'contact'].map((path) => (
-            <NavLink
-              key={path}
-              to={`/${path}`}
+          {[
+            { name: 'Services', path: '/#services' },
+            { name: 'Approach', path: '/#approach' },
+            { name: 'Research', path: '/#research' },
+            { name: 'FAQ', path: '/#faq' },
+            { name: 'Contact', path: '/#contact' },
+          ].map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
               className="nav-link"
               onClick={closeMenu}
             >
               <span className="light-text">
-                {path.charAt(0).toUpperCase() + path.slice(1)}
+                {item.name}
               </span>
               <img src={ellipse} className="ellipse" alt="" />
-            </NavLink>
+            </Link>
           ))}
         </div>
 
