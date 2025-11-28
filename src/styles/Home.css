@@ -417,8 +417,7 @@
 .research-border {
   height: 350px;
 }
-.full-report {
-  width: 30%;
+.full-report-home {
   cursor: pointer;
 }
 
@@ -852,10 +851,6 @@
 
   .research-image {
     width: 100%;
-  }
-
-  .full-report {
-    width: 50%;
   }
 
   .borderimage {

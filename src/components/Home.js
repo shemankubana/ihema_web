@@ -237,7 +237,7 @@ const Home = () => {
                 <img
                   src={fullreport}
                   alt="full report"
-                  className="full-report"
+                  className="full-report-home"
                 />
               </Link>
             </div>
@@ -258,7 +258,7 @@ const Home = () => {
                 <img
                   src={fullreport}
                   alt="full report"
-                  className="full-report"
+                  className="full-report-home"
                 />
               </Link>
             </div>
@@ -279,7 +279,7 @@ const Home = () => {
                 <img
                   src={fullreport}
                   alt="full report"
-                  className="full-report"
+                  className="full-report-home"
                 />
               </Link>
             </div>
@@ -300,7 +300,7 @@ const Home = () => {
                 <img
                   src={fullreport}
                   alt="full report"
-                  className="full-report"
+                  className="full-report-home"
                 />
               </Link>
             </div>
