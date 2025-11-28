@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import './App.css';
 
 const ScrollToHash = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -21,7 +21,7 @@ const ScrollToHash = () => {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return null;
 };
