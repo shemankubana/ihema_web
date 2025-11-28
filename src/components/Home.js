@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import FAQSection from "./FAQs";
@@ -37,6 +37,34 @@ import profileimg2 from "../assets/images/Rectangle 73.svg";
 
 // --- Your Original Home Component ---
 const Home = () => {
+  // State for rotating approach points
+  const [currentApproach, setCurrentApproach] = useState(0);
+
+  // Define the three approach points
+  const approaches = [
+    {
+      title: "Community-Centered Methods",
+      description: "Grounded in local culture and realities to ensure the relevant, accurate, and respectful outcomes for our research's results."
+    },
+    {
+      title: "Data-Driven Insights",
+      description: "Leveraging rigorous quantitative and qualitative methodologies to deliver actionable intelligence that drives meaningful impact."
+    },
+    {
+      title: "Collaborative Excellence",
+      description: "Working closely with stakeholders and communities to co-create solutions that are sustainable, ethical, and transformative."
+    }
+  ];
+
+  // Auto-rotate through approaches every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentApproach((prev) => (prev + 1) % approaches.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -213,6 +241,24 @@ const Home = () => {
       </section>
 
       {/* Our Approach Section */}
+      <section className="our-approach-section" id="approach">
+        <div className="approach-container">
+          <h2 className="approach-title">Our Approach</h2>
+
+          <div className="approach-arc-container">
+            <div className="approach-arc">
+              <div className="approach-step">{currentApproach + 1}</div>
+              <div className="approach-content">
+                <h3>{approaches[currentApproach].title}</h3>
+                <p>{approaches[currentApproach].description}</p>
+              </div>
+            </div>
+            {/* Decorative bottom circles */}
+            <div className="approach-decoration left"></div>
+            <div className="approach-decoration right"></div>
+          </div>
+        </div>
+      </section>
 
       {/* Research Wall Section */}
       {/* Research Wall Section */}

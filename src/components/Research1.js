@@ -12,7 +12,10 @@ import headerborder from "../assets/images/bordder-line.svg";
 import content from "../assets/images/content.svg";
 import analytics from "../assets/images/Research1_analytics.svg";
 import { image } from "framer-motion/client";
-import researchcardimage from "../assets/images/Rectangle 60.svg";
+import researchimage from "../assets/images/Rectangle 45.svg";
+import researchimage2 from "../assets/images/Rectangle 60.svg";
+import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
 
@@ -143,7 +146,7 @@ const Research1 = () => {
                   and Resilience Program (CRRP Rwanda)
                 </p>
                 <img
-                  src={researchcardimage}
+                  src={researchimage2}
                   alt="research-card"
                   className="research-card-image"
                 />
@@ -161,7 +164,7 @@ const Research1 = () => {
                   community development and educational initiatives
                 </p>
                 <img
-                  src={researchcardimage}
+                  src={researchimage3}
                   alt="research-card"
                   className="research-card-image"
                 />
@@ -179,7 +182,7 @@ const Research1 = () => {
                   Phase II Midterm Evaluation
                 </p>
                 <img
-                  src={researchcardimage}
+                  src={researchimage4}
                   alt="research-card"
                   className="research-card-image"
                 />

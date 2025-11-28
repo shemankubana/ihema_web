@@ -111,7 +111,7 @@
 
 .research-card-image {
   width: 100%;
-  height: 200px; /* Enforce consistent image height */
+  height: 300px; /* Enforce consistent image height */
   object-fit: cover;
   margin-bottom: 1rem;
   border-radius: 20px; /* Add border radius */
@@ -134,10 +134,43 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
+
+/* Tablet (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .research-page {
+    margin-top: 15%;
+    padding-inline: 5%;
+  }
+
+  .research-heading-container {
+    gap: 2%;
+  }
+
+  .research-heading {
+    font-size: 26px;
+  }
+
+  .cards-container {
+    gap: 1.5rem;
+  }
+
+  .research-card-paragraph {
+    font-size: 18px !important;
+    min-height: 100px;
+  }
+
+  .research-card-image {
+    height: 250px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .research-page {
-    margin-top: 20%;
+    margin-top: 25%;
     padding-inline: 5%;
+    margin-bottom: 10%;
   }
 
   .research-heading-container {
@@ -170,6 +203,7 @@
   .research-card-container {
     height: auto;
     flex-direction: column;
+    margin-top: 2rem;
   }
 
   .research-card-border {
@@ -179,21 +213,29 @@
   .outer-container {
     margin-left: 0;
     width: 100%;
+    gap: 3rem;
   }
 
   .cards-container {
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .research-card {
     align-items: center;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .research-card-paragraph {
     font-size: 18px !important;
     width: 100% !important;
     text-align: left;
+    min-height: auto;
+  }
+  
+  .research-card-image {
+      height: auto;
+      max-height: 300px;
   }
 }

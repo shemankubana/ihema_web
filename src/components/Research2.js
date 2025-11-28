@@ -9,9 +9,24 @@ import arrowWhiteButton from "../assets/icons/Group 12.svg";
 import headerborder from "../assets/images/bordder-line.svg";
 import content from "../assets/images/content.svg";
 import analytics from "../assets/images/Research1_analytics.svg";
-import researchcardimage from "../assets/images/Rectangle 60.svg";
+import researchimage from "../assets/images/Rectangle 45.svg";
+import researchimage2 from "../assets/images/Rectangle 60.svg";
+import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
+import content2 from "../assets/images/content2.svg";
+import analytics2 from "../assets/images/analytics2.svg";
+
+const contentParagraph1 = "In the critical months following the COVID-19 pandemic's devastating impact on Rwanda's economic landscape, IHEMA Research Team Ltd. was strategically subcontracted by Tango International to spearhead the comprehensive Rapid Review of the Mastercard Foundation COVID-19 Recovery and Resilience Program (CRRP Rwanda). This pivotal evaluation represented one of the foundational projects for our newly established consultancy, demonstrating our capability to deliver high-impact research within tight timelines while maintaining rigorous academic standards.";
+
+const contentParagraph2 = "Our role extended far beyond traditional data collection. IHEMA Research Team assumed full operational leadership of all field-based evaluation activities, orchestrating a complex multi-phase approach that required exceptional coordination and expertise. We designed and implemented a comprehensive enumerator training program that equipped field researchers with the specialized skills necessary to capture nuanced recovery indicators across diverse communities affected by the pandemic. This training emphasized not only technical data collection methodologies but also the cultural sensitivity required when engaging with vulnerable populations navigating post-pandemic economic challenges.";
+
+const contentParagraph3 = "The qualitative research component demanded particular innovation and rigor. Our team meticulously designed qualitative research instruments that could effectively capture the multifaceted experiences of program beneficiaries, including small business owners, youth entrepreneurs, and community organizations working to rebuild economic resilience. Through an iterative refinement process, we continuously enhanced these tools based on pilot testing feedback and emerging insights from the field, ensuring that our data collection captured both the intended program outcomes and unexpected ripple effects throughout beneficiary communities.";
+
+const contentParagraph4 = "One of our most significant contributions was the development of comprehensive qualitative data matrices that transformed raw interview transcripts and focus group discussions into structured analytical frameworks. These matrices didn't simply organize data - they provided top-line analysis that identified emerging patterns, highlighted success stories, flagged implementation challenges, and revealed critical insights about program effectiveness. This analytical work laid the foundation for evidence-based recommendations that could immediately inform program adjustments and future resilience initiatives.";
+
+const contentParagraph5 = "Throughout the evaluation process, IHEMA Research Team maintained close collaborative ties with Tango International researchers, participating in regular synthesis meetings where qualitative findings were triangulated with quantitative data streams. This collaboration enriched the final evaluation report, which we co-authored, ensuring that the narrative authentically represented ground-level realities while meeting international evaluation standards. Our team also contributed to the development of compelling presentations that effectively communicated complex findings to diverse audiences, including the Mastercard Foundation team, government stakeholders, and implementing partners.";
 
 const Research2 = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -98,10 +113,22 @@ const Research2 = () => {
                 </div>
                 <div className="content-container">
                     <p className="content-paragraph">
-                        This rapid review assessed the effectiveness of the COVID-19 Recovery and Resilience Program (CRRP) in Rwanda. The study focused on understanding the impact of the program on beneficiaries' livelihoods, business continuity, and resilience to future shocks. Key findings highlighted the importance of financial support, digital literacy training, and market access in helping MSMEs recover from the pandemic. The review provided actionable recommendations for future programming to enhance resilience and inclusivity.
+                        {contentParagraph1}
                     </p>
-                    <img src={content} alt="content" className="content-image" />
-                    <img src={analytics} alt="Analytics" className="analytics" />
+                    <p className="content-paragraph">
+                        {contentParagraph2}
+                    </p>
+                    <p className="content-paragraph">
+                        {contentParagraph3}
+                    </p>
+                    <p className="content-paragraph">
+                        {contentParagraph4}
+                    </p>
+                    <p className="content-paragraph">
+                        {contentParagraph5}
+                    </p>
+                    <img src={content2} alt="content" className="content-image" />
+                    <img src={analytics2} alt="Analytics" className="analytics" />
                 </div>
                 <div className="research-card-container">
                     <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />
@@ -114,7 +141,7 @@ const Research2 = () => {
                                     Phase II Endline & Phase III Baseline
                                 </p>
                                 <img
-                                    src={researchcardimage}
+                                    src={researchimage}
                                     alt="research-card"
                                     className="research-card-image"
                                 />
@@ -132,7 +159,7 @@ const Research2 = () => {
                                     community development and educational initiatives
                                 </p>
                                 <img
-                                    src={researchcardimage}
+                                    src={researchimage3}
                                     alt="research-card"
                                     className="research-card-image"
                                 />
@@ -150,7 +177,7 @@ const Research2 = () => {
                                     Phase II Midterm Evaluation
                                 </p>
                                 <img
-                                    src={researchcardimage}
+                                    src={researchimage4}
                                     alt="research-card"
                                     className="research-card-image"
                                 />
