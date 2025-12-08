@@ -247,10 +247,17 @@ const Home = () => {
 
           <div className="approach-arc-container">
             <div className="approach-arc">
-              {/* Three numbered circles positioned around the arc */}
-              <div className={`approach-number left ${currentApproach === 0 ? 'active' : ''}`}>1</div>
-              <div className={`approach-number top ${currentApproach === 1 ? 'active' : ''}`}>2</div>
-              <div className={`approach-number right ${currentApproach === 2 ? 'active' : ''}`}>3</div>
+              {/* Three decorative circles showing all approach numbers */}
+              {/* Left: first inactive approach */}
+              <div className="approach-decoration left">
+                {currentApproach === 0 ? 2 : currentApproach === 1 ? 1 : 1}
+              </div>
+              {/* Top: active approach */}
+              <div className="approach-decoration top active">{currentApproach + 1}</div>
+              {/* Right: second inactive approach */}
+              <div className="approach-decoration right">
+                {currentApproach === 0 ? 3 : currentApproach === 1 ? 3 : 2}
+              </div>
 
               {/* Vertical line from active number */}
               <div className="approach-line"></div>
@@ -261,9 +268,6 @@ const Home = () => {
                 <p>{approaches[currentApproach].description}</p>
               </div>
             </div>
-            {/* Decorative bottom circles */}
-            <div className="approach-decoration left"></div>
-            <div className="approach-decoration right"></div>
           </div>
         </div>
       </section>

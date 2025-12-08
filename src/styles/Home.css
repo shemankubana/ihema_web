@@ -367,56 +367,6 @@
   align-items: center;
 }
 
-/* Three numbered circles positioned around the arc */
-.approach-number {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 500;
-  z-index: 2;
-  transition: all 0.5s ease-in-out;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Position circles around the arc */
-.approach-number.left {
-  left: 10%;
-  bottom: 0;
-}
-
-.approach-number.top {
-  left: 50%;
-  top: -25px;
-  transform: translateX(-50%);
-}
-
-.approach-number.right {
-  right: 10%;
-  bottom: 0;
-}
-
-/* Active state styling */
-.approach-number.active {
-  background-color: #185a91;
-  border-color: white;
-  color: white;
-  transform: translateX(-50%) scale(1.1);
-}
-
-.approach-number.left.active {
-  transform: scale(1.1);
-}
-
-.approach-number.right.active {
-  transform: scale(1.1);
-}
 
 /* Vertical line from active number at top */
 .approach-line {
@@ -455,19 +405,41 @@
 
 .approach-decoration {
   position: absolute;
-  bottom: -50px;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.6s ease-in-out;
+  z-index: 3;
 }
 
 .approach-decoration.left {
-  left: 5%;
+  left: 8%;
+  bottom: -35px;
+}
+
+.approach-decoration.top {
+  left: 50%;
+  top: -70px;
+  transform: translateX(-50%);
 }
 
 .approach-decoration.right {
-  right: 5%;
+  right: 8%;
+  bottom: -35px;
+}
+
+/* Active state for the top circle */
+.approach-decoration.active {
+  background-color: #185a91;
+  border-color: white;
+  transform: translateX(-50%) scale(1.15);
 }
 
 /* Responsive adjustments for Approach Section */
@@ -487,23 +459,24 @@
     margin-top: 2rem;
   }
   
-  /* Adjust circle positions for mobile */
-  .approach-number.left {
-    left: 5%;
-    bottom: 10px;
-  }
-  
-  .approach-number.top {
-    top: -25px;
-  }
-  
-  .approach-number.right {
-    right: 5%;
-    bottom: 10px;
-  }
-  
   .approach-decoration {
-    display: none;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+  
+  .approach-decoration.left {
+    left: 5%;
+    bottom: -25px;
+  }
+  
+  .approach-decoration.top {
+    top: -50px;
+  }
+  
+  .approach-decoration.right {
+    right: 5%;
+    bottom: -25px;
   }
 }
 
