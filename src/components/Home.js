@@ -247,7 +247,15 @@ const Home = () => {
 
           <div className="approach-arc-container">
             <div className="approach-arc">
-              <div className="approach-step">{currentApproach + 1}</div>
+              {/* Three numbered circles positioned around the arc */}
+              <div className={`approach-number left ${currentApproach === 0 ? 'active' : ''}`}>1</div>
+              <div className={`approach-number top ${currentApproach === 1 ? 'active' : ''}`}>2</div>
+              <div className={`approach-number right ${currentApproach === 2 ? 'active' : ''}`}>3</div>
+
+              {/* Vertical line from active number */}
+              <div className="approach-line"></div>
+
+              {/* Content for current approach */}
               <div className="approach-content">
                 <h3>{approaches[currentApproach].title}</h3>
                 <p>{approaches[currentApproach].description}</p>
@@ -262,93 +270,95 @@ const Home = () => {
 
       {/* Research Wall Section */}
       {/* Research Wall Section */}
-      <div className="data-points-box">
-        <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>Our Research Wall</p>
-      </div>
       <section className="research" id="research">
-        <div className="research-container">
-          <div className="research-card-list">
-            <div className="research-main">
-              <p>
-                USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-                Phase II Endline & Phase III Baseline
-              </p>
-              <img
-                src={researchimage}
-                alt="research image"
-                className="research-image"
-              />
-              <Link to="/research/mcgovern-dole">
+        <div className="data-points-box">
+          <img src={blueBox} alt="Blue Box" className="blue-box" />
+          <p>Our Research Wall</p>
+        </div>
+        <div className="research-research">
+          <div className="research-container">
+            <div className="research-card-list">
+              <div className="research-main">
+                <p>
+                  USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+                  Phase II Endline & Phase III Baseline
+                </p>
                 <img
-                  src={fullreport}
-                  alt="full report"
-                  className="full-report-home"
+                  src={researchimage}
+                  alt="research image"
+                  className="research-image"
                 />
-              </Link>
+                <Link to="/research/mcgovern-dole">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report-home"
+                  />
+                </Link>
+              </div>
+              <img src={researchborder} alt="research border" className="research-border" />
             </div>
-            <img src={researchborder} alt="research border" className="research-border" />
-          </div>
-          <div className="research-card-list">
-            <div className="research-main">
-              <p>
-                Rapid review of the Mastercard Foundation COVID-19 Recovery and
-                Resilience Program (CRRP Rwanda)
-              </p>
-              <img
-                src={researchimage2}
-                alt="research image"
-                className="research-image"
-              />
-              <Link to="/research/mastercard-foundation">
+            <div className="research-card-list">
+              <div className="research-main">
+                <p>
+                  Rapid review of the Mastercard Foundation COVID-19 Recovery and
+                  Resilience Program (CRRP Rwanda)
+                </p>
                 <img
-                  src={fullreport}
-                  alt="full report"
-                  className="full-report-home"
+                  src={researchimage2}
+                  alt="research image"
+                  className="research-image"
                 />
-              </Link>
+                <Link to="/research/mastercard-foundation">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report-home"
+                  />
+                </Link>
+              </div>
+              <img src={researchborder} alt="research border" className="research-border" />
             </div>
-            <img src={researchborder} alt="research border" className="research-border" />
-          </div>
-          <div className="research-card-list">
-            <div className="research-main">
-              <p>
-                Impact study of World Vision Rwanda programs focusing on
-                community development and educational initiatives
-              </p>
-              <img
-                src={researchimage3}
-                alt="research image"
-                className="research-image"
-              />
-              <Link to="/research/world-vision">
+            <div className="research-card-list">
+              <div className="research-main">
+                <p>
+                  Impact study of World Vision Rwanda programs focusing on
+                  community development and educational initiatives
+                </p>
                 <img
-                  src={fullreport}
-                  alt="full report"
-                  className="full-report-home"
+                  src={researchimage3}
+                  alt="research image"
+                  className="research-image"
                 />
-              </Link>
+                <Link to="/research/world-vision">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report-home"
+                  />
+                </Link>
+              </div>
+              <img src={researchborder} alt="research border" className="research-border" />
             </div>
-            <img src={researchborder} alt="research border" className="research-border" />
-          </div>
-          <div className="research-card-list">
-            <div className="research-main">
-              <p>
-                USDA McGovern-Dole Grant: Home Grown School Feeding Program -
-                Phase II Midterm Evaluation
-              </p>
-              <img
-                src={researchimage4}
-                alt="research image"
-                className="research-image"
-              />
-              <Link to="/research/mcgovern-dole-midterm">
+            <div className="research-card-list">
+              <div className="research-main">
+                <p>
+                  USDA McGovern-Dole Grant: Home Grown School Feeding Program -
+                  Phase II Midterm Evaluation
+                </p>
                 <img
-                  src={fullreport}
-                  alt="full report"
-                  className="full-report-home"
+                  src={researchimage4}
+                  alt="research image"
+                  className="research-image"
                 />
-              </Link>
+                <Link to="/research/mcgovern-dole-midterm">
+                  <img
+                    src={fullreport}
+                    alt="full report"
+                    className="full-report-home"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
