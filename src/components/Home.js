@@ -105,12 +105,14 @@ const Home = () => {
               </div>
             </div>
             <div className="learn-more">
-              <p className="learn-more-p">Communities hold the truth </p>
-              <p className="learn-more-p">— we help bring it to light.</p>
+              <div className="learn-more-p-container">
+                <p className="learn-more-p">Communities hold the truth </p>
+                <p className="learn-more-p">— we help bring it to light.</p>
+              </div>
               <Link to="/get-involved" className="nav-actions-link">
                 <div className="nav-actions">
                   <p className="get-involved">Get Involved</p>
-                  <img src={arrow} alt="" />
+                  <img src={arrow} alt="" className="arrow-get-involved" />
                 </div>
               </Link>
             </div>
@@ -119,12 +121,13 @@ const Home = () => {
       </header>
 
       {/* Partners Section */}
-      <section className="partners-section" id="approach">
+      {/* Partners Section */}
+      <section className="partners-section" id="about-us">
+        <div className="data-points-box">
+          <img src={blueBox} alt="Blue Box" className="blue-box" />
+          <p>Get To Know Us.</p>
+        </div>
         <div className="know-us-container">
-          <div className="get-to-know">
-            <img src={blueBox} alt="Blue Box" className="blue-box" />
-            <p>Get To Know Us</p>
-          </div>
           <div className="know-us-header">
             <p>
               We don’t just talk about growth. We design{" "}
@@ -163,58 +166,61 @@ const Home = () => {
           <img src={blueBox} alt="Blue Box" className="blue-box" />
           <p>Evidence For Impact.</p>
         </div>
-        <div className="data-points-header">
-          <p>
-            Hundreds of <span>data points</span>, dozens of stories uncovered.
-          </p>
-        </div>
-        <div className="data-cards">
-          <div className="data-card">
-            <img src={fingerprint} alt="Fingerprint Icon" />
-            <div>
-              <p className="data-points">Data Collection and Analysis</p>
-              <p className="data-points-p">
-                High-quality, context-driven data gathering and analysis.
-              </p>
-            </div>
+        <div className="data-points-container">
+          <div className="data-points-header">
+            <p>
+              Hundreds of <span>data points</span>,
+            </p>
+            <p>dozens of stories uncovered.</p>
           </div>
-          <div className="data-card">
-            <img src={ai} alt="AI Icon" />
-            <div>
-              <p className="data-points">Impact Evaluation</p>
-              <p className="data-points-p">
-                In-depth studies to understand trends, consumer behavior, &
-                economic conditions.
-              </p>
+          <div className="data-cards">
+            <div className="data-card">
+              <img src={fingerprint} alt="Fingerprint Icon" />
+              <div>
+                <p className="data-points">Data Collection and Analysis</p>
+                <p className="data-points-p">
+                  High-quality, context-driven data gathering and analysis.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="data-card">
-            <img src={biotech} alt="Biotech Icon" />
-            <div>
-              <p className="data-points">Market Research</p>
-              <p className="data-points-p">
-                Assessing program performance, effectiveness, and impact.
-              </p>
+            <div className="data-card">
+              <img src={ai} alt="AI Icon" />
+              <div>
+                <p className="data-points">Impact Evaluation</p>
+                <p className="data-points-p">
+                  In-depth studies to understand trends, consumer behavior, &
+                  economic conditions.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="data-card">
-            <img src={layers} alt="Layers Icon" />
-            <div>
-              <p className="data-points">Policy Research</p>
-              <p className="data-points-p">
-                Expert support to design practical, sustainable solutions.
-              </p>
+            <div className="data-card">
+              <img src={biotech} alt="Biotech Icon" />
+              <div>
+                <p className="data-points">Market Research</p>
+                <p className="data-points-p">
+                  Assessing program performance, effectiveness, and impact.
+                </p>
+              </div>
+            </div>
+            <div className="data-card">
+              <img src={layers} alt="Layers Icon" />
+              <div>
+                <p className="data-points">Policy Research</p>
+                <p className="data-points-p">
+                  Expert support to design practical, sustainable solutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Next Level Section */}
-      <div className="data-points-box">
-        <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>Explore What We Offer.</p>
-      </div>
       <section className="next-level-section">
+        <div className="data-points-box">
+          <img src={blueBox} alt="Blue Box" className="blue-box" />
+          <p>Explore What We Offer.</p>
+        </div>
         <div className="next-level-container">
           <div className="next-level-content">
             <p>The Next Level Of </p>
@@ -242,22 +248,20 @@ const Home = () => {
 
       {/* Our Approach Section */}
       <section className="our-approach-section" id="approach">
+        <p className="Our-Approach">Our Approach</p>
         <div className="approach-container">
-          <h2 className="approach-title">Our Approach</h2>
 
           <div className="approach-arc-container">
             <div className="approach-arc">
               {/* Three decorative circles showing all approach numbers */}
               {/* Left: first inactive approach */}
-              <div className="approach-decoration left">
-                {currentApproach === 0 ? 2 : currentApproach === 1 ? 1 : 1}
-              </div>
+              <div className="approach-decoration left"></div>
               {/* Top: active approach */}
-              <div className="approach-decoration top active">{currentApproach + 1}</div>
-              {/* Right: second inactive approach */}
-              <div className="approach-decoration right">
-                {currentApproach === 0 ? 3 : currentApproach === 1 ? 3 : 2}
+              <div className="approach-decoration top active">
+                {currentApproach + 1}
               </div>
+              {/* Right: second inactive approach */}
+              <div className="approach-decoration right"></div>
 
               {/* Vertical line from active number */}
               <div className="approach-line"></div>
@@ -369,11 +373,12 @@ const Home = () => {
       </section>
 
       {/* About Us */}
+      {/* About Us */}
       <div className="data-points-box">
         <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>About Us</p>
+        <p>Meet The Team</p>
       </div>
-      <section className="about-us">
+      <section className="about-us" id="team">
         <div className="about-us-container">
           <div className="about-us-paragraph">
             <p>

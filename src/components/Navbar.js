@@ -46,9 +46,11 @@ const Navbar = () => {
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
           {[
+            { name: 'About Us', path: '/#about-us' },
             { name: 'Services', path: '/#services' },
             { name: 'Approach', path: '/#approach' },
             { name: 'Research', path: '/#research' },
+            { name: 'Team', path: '/#team' },
             { name: 'FAQ', path: '/#faq' },
             { name: 'Contact', path: '/#contact' },
           ].map((item) => (
