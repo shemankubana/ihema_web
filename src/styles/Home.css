@@ -39,7 +39,7 @@
 
 .hero-container {
   width: 100%;
-  min-height: 430px;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -298,6 +298,14 @@
   gap: 5px;
   padding-left: 5% !important;
 }
+
+  .data-points-box-about-us {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 5% !important;
+  }
+
 
 .data-points-header span {
   color: #185a91;
@@ -890,7 +898,11 @@
 /* --- Large Tablet/Small Desktop (769px to 1024px) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-section {
-    min-height: 90vh;
+    height: 90vh;
+  }
+
+  .hero-content h2 {
+    font-size: clamp(24px, 4vw, 32px);
   }
 
   .second-hero-content {
@@ -952,12 +964,16 @@
 /* --- Tablet (481px to 768px) --- */
 @media (min-width: 481px) and (max-width: 768px) {
   .hero-section {
-    min-height: 80vh;
+    height: 80vh;
     padding-block: 100px 40px;
   }
 
+  .hero-content h2 {
+    font-size: clamp(24px, 4vw, 32px);
+  }
+
   .hero-container {
-    min-height: 400px;
+    height: 50vh;
   }
 
   .second-hero-content {
@@ -968,6 +984,7 @@
 
   .text-container {
     width: 100%;
+    display: none;
   }
 
   .learn-more {
@@ -1044,12 +1061,16 @@
 @media (max-width: 480px) {
   /* --- General Adjustments --- */
   .hero-section {
-    min-height: 100vh;
+    height: 85vh;
     padding-block: 100px 30px;
   }
 
+  .hero-content h2 {
+    font-size: clamp(24px, 4vw, 42px);
+  }
+
   .hero-container {
-    min-height: auto;
+    height: 40vh;
     gap: 2rem;
   }
 
@@ -1254,7 +1275,6 @@
   }
 
   .data-card {
-    border-left: 1px solid #185a91;
     min-height: 200px;
     padding: 1.5rem;
   }
@@ -1398,11 +1418,11 @@
   /* Hero Section */
   .hero-section {
     padding-block: 100px 40px;
-    min-height: auto;
+    height: 90vh;
   }
   .hero-container {
     gap: 2rem;
-    min-height: auto;
+    height: 50vh;
   }
   .second-hero-content {
     flex-direction: column;
@@ -1427,6 +1447,7 @@
   .partners-section {
     min-height: auto;
     padding-bottom: 3rem;
+    margin: 0 2%;
   }
   .know-us-container {
     gap: 2rem;
@@ -1448,10 +1469,13 @@
   .data-points-section {
     min-height: auto;
     padding-bottom: 3rem;
+    margin: 0 2%;
   }
+
   .data-points-header {
-    padding: 0 !important;
+    padding-bottom: 50px !important;
   }
+  
   .data-points-box {
     padding-left: 0 !important;
   }
@@ -1460,6 +1484,7 @@
   .next-level-section {
     min-height: auto;
     padding-bottom: 3rem;
+    margin: 0 2%;
   }
   .next-level-container {
     flex-direction: column;
@@ -1495,6 +1520,7 @@
   .research {
     min-height: auto;
     padding-bottom: 3rem;
+    margin: 0 2%;
   }
   .research-container {
     flex-direction: column;
@@ -1516,7 +1542,15 @@
   .about-us {
     min-height: auto;
     padding-bottom: 3rem;
+
   }
+
+  .data-points-box-about-us {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
   .about-us-container {
     flex-direction: column;
     align-items: flex-start;
@@ -1531,4 +1565,18 @@
     flex-direction: column;
     gap: 3rem;
   }
+
+  #faq {
+    margin: 0 2%;
+  }
+
+  .faq-section {
+    gap: 2rem;
+  }
+  
+  .contact-section  {
+    text-align: left;
+    gap: 2rem;
+  }
+  
 }

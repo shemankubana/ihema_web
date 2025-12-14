@@ -58,7 +58,8 @@
   border-radius: 13px;
 }
 .content-paragraph {
-  padding: 3%;
+  padding-inline: 3%;
+  padding-block: 1%;
   font-size: 20px;
   color: black;
 }
@@ -85,6 +86,7 @@
   align-items: center;
   justify-content: center;
   height: 600px;
+  gap: 4rem;
 }
 
 .cards-container {
@@ -93,7 +95,7 @@
 }
 
 .research-card-paragraph {
-  font-size: 22px !important;
+  font-size: 18px !important;
   width: 100% !important;
   min-height: 120px; /* Ensure consistent height for text */
   margin-bottom: 10px;
@@ -118,12 +120,11 @@
 }
 
 .full-report {
-  width: 100%;
-  max-width: 150px; /* Limit width of button */
+  width: 80%;
 }
 
 .research-card-border {
-  height:80%;
+  height: 90%;
 }
 
 .outer-container {
@@ -197,7 +198,8 @@
 
   .content-paragraph {
     font-size: 16px;
-    padding: 5%;
+    padding-inline: 5%;
+    padding-block: 3%;
   }
 
   .research-card-container {

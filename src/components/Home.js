@@ -374,7 +374,7 @@ const Home = () => {
 
       {/* About Us */}
       {/* About Us */}
-      <div className="data-points-box">
+      <div className="data-points-box-about-us">
         <img src={blueBox} alt="Blue Box" className="blue-box" />
         <p>Meet The Team</p>
       </div>
@@ -435,20 +435,16 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <div className="data-points-box">
-        <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>All Your Questions, Answered.</p>
-      </div>
       <div id="faq">
         <FAQSection />
       </div>
 
       {/* Contact Section */}
-      <div className="data-points-box">
-        <img src={blueBox} alt="Blue Box" className="blue-box" />
-        <p>Contact Us</p>
-      </div>
       <section className="contact-section" id="contact">
+        <div className="data-points-box">
+          <img src={blueBox} alt="Blue Box" className="blue-box" />
+          <p>Contact Us</p>
+        </div>
         <div className="contact-section-container">
           <div className="text">
             <h2 className="contact-header">
