@@ -1387,3 +1387,148 @@
     font-size: 1rem;
   }
 }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  /* General */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-block: 100px 40px;
+    min-height: auto;
+  }
+  .hero-container {
+    gap: 2rem;
+    min-height: auto;
+  }
+  .second-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .learn-more {
+    width: 100%;
+    align-items: flex-start;
+    height: auto;
+    gap: 20px;
+  }
+  .learn-more .nav-actions {
+    width: 100%;
+    max-width: 240px;
+  }
+  .hero-paragraph {
+    margin-top: 0;
+  }
+
+  /* Partners Section */
+  .partners-section {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .know-us-container {
+    gap: 2rem;
+  }
+  .know-us-subtitle {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .partner-logos {
+    gap: 2rem;
+  }
+  .partner-logos img {
+    height: 30px;
+  }
+  .wfp { height: 60px !important; }
+  .master-card { height: 45px !important; }
+
+  /* Data Points Section */
+  .data-points-section {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .data-points-header {
+    padding: 0 !important;
+  }
+  .data-points-box {
+    padding-left: 0 !important;
+  }
+
+  /* Next Level Section */
+  .next-level-section {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .next-level-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .next-level-content {
+    font-size: 2rem;
+  }
+
+  /* Our Approach Section */
+  .our-approach-section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+  .approach-arc {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    margin-top: 2rem;
+  }
+  .approach-decoration {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .approach-decoration.left { left: 0; bottom: -25px; }
+  .approach-decoration.right { right: 0; bottom: -25px; }
+  .approach-decoration.top { top: -25px; }
+
+  /* Research Wall Section */
+  .research {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .research-container {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+  }
+  .research-card-list {
+    width: 100%;
+    flex-direction: column;
+  }
+  .research-border {
+    display: none; /* Hide vertical borders on mobile */
+  }
+  .research-image {
+    height: 250px;
+  }
+
+  /* About Us / Meet The Team */
+  .about-us {
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+  .about-us-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  .about-us-paragraph {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .profiles {
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
