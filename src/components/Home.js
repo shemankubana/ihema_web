@@ -27,7 +27,7 @@ import wfpLogo from "../assets/logos/WFP 1.png";
 import mscLogo from "../assets/logos/MSC 1.png";
 import researchimage from "../assets/images/Rectangle 45.svg";
 import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/Group 14.svg";
 import researchborder from "../assets/icons/Line 32.svg";
@@ -60,7 +60,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentApproach((prev) => (prev + 1) % approaches.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -436,15 +436,19 @@ const Home = () => {
 
       {/* FAQ Section */}
       <div id="faq">
+        <div className="data-points-box">
+          <img src={blueBox} alt="Blue Box" className="blue-box" />
+          <p>All Your Questions, Answered.</p>
+        </div>
         <FAQSection />
       </div>
 
       {/* Contact Section */}
+      <div className="data-points-box">
+        <img src={blueBox} alt="Blue Box" className="blue-box" />
+        <p>Contact Us</p>
+      </div>
       <section className="contact-section" id="contact">
-        <div className="data-points-box">
-          <img src={blueBox} alt="Blue Box" className="blue-box" />
-          <p>Contact Us</p>
-        </div>
         <div className="contact-section-container">
           <div className="text">
             <h2 className="contact-header">
