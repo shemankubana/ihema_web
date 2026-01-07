@@ -41,7 +41,7 @@ const Navbar = () => {
 
     // Determine logo and icons based on theme
     const logoSrc = isHome ? logoWhite : logoBlack;
-    const arrowIconSrc = arrowGroup36;
+    const arrowIconSrc = isHome ? arrowWhite : arrowGroup36;
 
     return (
         <nav className={navbarClass}>
