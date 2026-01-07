@@ -136,8 +136,20 @@
 .footer-social-links a:hover {
   text-decoration: underline;
 }
+.footer-social-links p {
+  color: #D0C9C9;
+  text-decoration: none;
+}
+
 .epique {
   color: #D0C9C9;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.epique:hover {
+  text-decoration: underline !important;
+  color: white;
 }
 
 /*

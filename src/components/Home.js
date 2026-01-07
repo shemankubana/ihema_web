@@ -149,13 +149,22 @@ const Home = () => {
               sustainable development, equity, and resilience of Rwanda.
             </p>
           </div>
-          <div className="partner-logos">
-            <img src={unhcrLogo} alt="UNHCR" />
-            <img src={worldVisionLogo} alt="World Vision" />
-            <img src={v37Logo} alt="V37" />
-            <img src={vsoLogo} alt="VSO" />
-            <img src={wfpLogo} alt="WFP" className="wfp" />
-            <img src={mscLogo} alt="MSC" className="master-card" />
+          <div className="partner-logos-container">
+            <div className="partner-logos">
+              <img src={unhcrLogo} alt="UNHCR" />
+              <img src={worldVisionLogo} alt="World Vision" />
+              <img src={v37Logo} alt="V37" />
+              <img src={vsoLogo} alt="VSO" />
+              <img src={wfpLogo} alt="WFP" className="wfp" />
+              <img src={mscLogo} alt="MSC" className="master-card" />
+              {/* Duplicate logos for seamless sliding loop */}
+              <img src={unhcrLogo} alt="UNHCR" />
+              <img src={worldVisionLogo} alt="World Vision" />
+              <img src={v37Logo} alt="V37" />
+              <img src={vsoLogo} alt="VSO" />
+              <img src={wfpLogo} alt="WFP" className="wfp" />
+              <img src={mscLogo} alt="MSC" className="master-card" />
+            </div>
           </div>
         </div>
       </section>
@@ -175,8 +184,8 @@ const Home = () => {
           </div>
           <div className="data-cards">
             <div className="data-card">
-              <img src={fingerprint} alt="Fingerprint Icon" />
-              <div>
+              <img src={fingerprint} alt="Fingerprint Icon" className="data-card-img" />
+              <div className="data-card-text">
                 <p className="data-points">Data Collection and Analysis</p>
                 <p className="data-points-p">
                   High-quality, context-driven data gathering and analysis.

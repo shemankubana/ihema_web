@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 // Assets
@@ -6,78 +6,100 @@ import logoWhite from '../assets/icons/Logo.png';
 import logoBlack from '../assets/images/logo_black.svg';
 import ellipse from '../assets/icons/Ellipse 4.svg';
 import arrowWhite from '../assets/icons/arrow_icon.png';
-import arrowBlack from '../assets/icons/arrow-blue.svg';
-import arrowWhiteButton from '../assets/icons/Group 12.svg';
+import arrowGroup36 from '../assets/images/Group 36.svg';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
-  // Only render navbar on home page
-  if (location.pathname !== '/') {
-    return null;
-  }
+    const isHome = location.pathname === '/';
 
-  const handleToggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
 
-  return (
-    <nav className="navbar">
-      {/* Logo */}
-      <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
-        <img
-          src={logoWhite}
-          alt="IHEMA Logo"
-          className="navbar-logo"
-        />
-      </Link>
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-      <div className="right-container">
-        {/* Hamburger menu */}
-        <div
-          className={`hamburger-menu ${menuOpen ? 'active' : ''}`}
-          onClick={handleToggleMenu}
-        >
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-        </div>
+    const handleToggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false);
 
-        {/* Nav links */}
-        <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
-          {[
-            { name: 'About Us', path: '/#about-us' },
-            { name: 'Services', path: '/#services' },
-            { name: 'Approach', path: '/#approach' },
-            { name: 'Research', path: '/#research' },
-            { name: 'Team', path: '/#team' },
-            { name: 'FAQ', path: '/#faq' },
-            { name: 'Contact', path: '/#contact' },
-          ].map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="nav-link"
-              onClick={closeMenu}
-            >
-              <span className="light-text">
-                {item.name}
-              </span>
-              <img src={ellipse} className="ellipse" alt="" />
+    // Determine navbar theme class
+    let navbarClass = 'navbar';
+    if (isHome) {
+        navbarClass += scrolled ? ' scrolled' : ' transparent';
+    } else {
+        navbarClass += ' light-theme';
+    }
+
+    // Determine logo and icons based on theme
+    const logoSrc = isHome ? logoWhite : logoBlack;
+    const arrowIconSrc = arrowGroup36;
+
+    return (
+        <nav className={navbarClass}>
+            {/* Logo */}
+            <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
+                <img
+                    src={logoSrc}
+                    alt="IHEMA Logo"
+                    className="navbar-logo"
+                />
             </Link>
-          ))}
-        </div>
 
-        {/* Get Involved button */}
-        <Link to="/get-involved" className="nav-actions-link">
-          <div className="nav-actions">
-            <p>Get Involved</p>
-            <img src={arrowWhite} alt="Arrow Icon" />
-          </div>
-        </Link>
-      </div>
-    </nav>
-  );
+            <div className="right-container">
+                {/* Hamburger menu */}
+                <div
+                    className={`hamburger-menu ${menuOpen ? 'active' : ''}`}
+                    onClick={handleToggleMenu}
+                >
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+
+                {/* Nav links */}
+                <div className={`nav-links ${menuOpen ? 'active' : ''}`}>
+                    {[
+                        { name: 'About Us', path: '/#about-us' },
+                        { name: 'Services', path: '/#services' },
+                        { name: 'Approach', path: '/#approach' },
+                        { name: 'Research', path: '/#research' },
+                        { name: 'Team', path: '/#team' },
+                        { name: 'FAQ', path: '/#faq' },
+                        { name: 'Contact', path: '/#contact' },
+                    ].map((item) => (
+                        <Link
+                            key={item.name}
+                            to={item.path}
+                            className="nav-link"
+                            onClick={closeMenu}
+                        >
+                            <span>
+                                {item.name}
+                            </span>
+                            <img src={ellipse} className="ellipse" alt="" />
+                        </Link>
+                    ))}
+                </div>
+
+                {/* Get Involved button */}
+                <Link to="/get-involved" className="nav-actions-link">
+                    <div className="nav-actions">
+                        <p>Get Involved</p>
+                        <img src={arrowIconSrc} alt="Arrow Icon" />
+                    </div>
+                </Link>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;

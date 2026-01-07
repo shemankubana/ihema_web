@@ -14,10 +14,12 @@ import analytics from "../assets/images/Research1_analytics.svg";
 import { image } from "framer-motion/client";
 import researchimage from "../assets/images/Rectangle 45.svg";
 import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
+import analytics2 from "../assets/images/analytics for research 4.png";
+import analytics3 from "../assets/images/analytics 2 for research 4.png";
 
 const Research1 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,60 +30,6 @@ const Research1 = () => {
 
   return (
     <div className="research-page">
-      {/* Custom Navbar for Research Page */}
-      <nav className="navbar light-theme">
-        {/* Logo */}
-        <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
-          <img src={logoBlack} alt="IHEMA Logo" className="navbar-logo" />
-        </Link>
-
-        <div className="right-container">
-          {/* Hamburger menu */}
-          <div
-            className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-            onClick={handleToggleMenu}
-          >
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
-          </div>
-
-          {/* Nav links */}
-          <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-            {[
-              { name: 'Services', path: '/#services' },
-              { name: 'Approach', path: '/#approach' },
-              { name: 'Research', path: '/#research' },
-              { name: 'FAQ', path: '/#faq' },
-              { name: 'Contact', path: '/#contact' },
-            ].map(
-              (item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className="nav-link"
-                  onClick={closeMenu}
-                >
-                  <span className="dark-text">
-                    {item.name}
-                  </span>
-                  <img src={ellipse} className="ellipse" alt="" />
-                </Link>
-              )
-            )}
-          </div>
-
-          {/* Get Involved button */}
-          <Link to="/get-involved" className="nav-actions-link">
-            <img
-              src={arrowWhiteButton}
-              alt="Get Involved Button"
-              className="white_arrow"
-            />
-          </Link>
-        </div>
-      </nav>
-
       {/* Research Content */}
       <div className="Research1-container">
         <div className="research-heading-container">
@@ -133,7 +81,10 @@ const Research1 = () => {
             The qualitative research dimension expanded significantly for this evaluation, reflecting the program's evolution and the need to understand broader systemic effects beyond individual school outcomes. IHEMA Research Team conducted extensive interviews with diverse stakeholder groups including district education officers, school feeding committee members, parent representatives, local government officials, agricultural cooperative leaders, and representatives from the Rwanda Education Board. These wide-ranging interviews explored themes including program sustainability, institutional capacity for continued implementation, the evolution of community ownership, challenges in maintaining supply chain reliability, and the broader community development impacts of linking school feeding to local agricultural production.
           </p>
           <img src={content} alt="content" className="content-image" />
-          <img src={analytics} alt="Analytics" className="analytics" />
+          <div className="analytics">
+            <img src={analytics2} alt="Analytics" className="analytics" />
+            <img src={analytics3} alt="Analytics" className="analytics" />
+          </div>
         </div>
         <div className="research-card-container">
           <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />

@@ -11,12 +11,13 @@ import content from "../assets/images/content.svg";
 import analytics from "../assets/images/Research1_analytics.svg";
 import researchimage from "../assets/images/Rectangle 45.svg";
 import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
 import content3 from "../assets/images/content3.svg";
-import analytics3 from "../assets/images/analytics3.svg";
+import analytics3 from "../assets/images/analytics 3.png";
+import analytics2 from "../assets/images/analytics 3-2.png";
 
 const Research3 = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -27,60 +28,6 @@ const Research3 = () => {
 
     return (
         <div className="research-page">
-            {/* Custom Navbar for Research Page */}
-            <nav className="navbar light-theme">
-                {/* Logo */}
-                <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
-                    <img src={logoBlack} alt="IHEMA Logo" className="navbar-logo" />
-                </Link>
-
-                <div className="right-container">
-                    {/* Hamburger menu */}
-                    <div
-                        className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-                        onClick={handleToggleMenu}
-                    >
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                    </div>
-
-                    {/* Nav links */}
-                    <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-                        {[
-                            { name: 'Services', path: '/#services' },
-                            { name: 'Approach', path: '/#approach' },
-                            { name: 'Research', path: '/#research' },
-                            { name: 'FAQ', path: '/#faq' },
-                            { name: 'Contact', path: '/#contact' },
-                        ].map(
-                            (item) => (
-                                <Link
-                                    key={item.name}
-                                    to={item.path}
-                                    className="nav-link"
-                                    onClick={closeMenu}
-                                >
-                                    <span className="dark-text">
-                                        {item.name}
-                                    </span>
-                                    <img src={ellipse} className="ellipse" alt="" />
-                                </Link>
-                            )
-                        )}
-                    </div>
-
-                    {/* Get Involved button */}
-                    <Link to="/get-involved" className="nav-actions-link">
-                        <img
-                            src={arrowWhiteButton}
-                            alt="Get Involved Button"
-                            className="white_arrow"
-                        />
-                    </Link>
-                </div>
-            </nav>
-
             {/* Research Content */}
             <div className="Research1-container">
                 <div className="research-heading-container">
@@ -122,7 +69,10 @@ const Research3 = () => {
                         Perhaps most importantly, we provided nuanced data interpretation that went beyond surface-level description to offer meaningful insights about program effectiveness, implementation challenges, and opportunities for program enhancement. Our interpretation work was grounded in deep contextual knowledge of Rwandan communities, understanding of international development best practices, and familiarity with the complex interplay of factors influencing community development outcomes. This interpretive expertise ensured that the evaluation findings were not just accurate but also actionable, providing World Vision Rwanda with evidence-based recommendations that could immediately inform program strategy and operations.
                     </p>
                     <img src={content3} alt="content" className="content-image" />
-                    <img src={analytics3} alt="Analytics" className="analytics" />
+                    <div className="analytics">
+                        <img src={analytics3} alt="Analytics" className="analytics" />
+                        <img src={analytics2} alt="Analytics" className="analytics" />
+                    </div>
                 </div>
                 <div className="research-card-container">
                     <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />

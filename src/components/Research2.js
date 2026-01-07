@@ -11,12 +11,13 @@ import content from "../assets/images/content.svg";
 import analytics from "../assets/images/Research1_analytics.svg";
 import researchimage from "../assets/images/Rectangle 45.svg";
 import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
 import content2 from "../assets/images/content2.svg";
-import analytics2 from "../assets/images/analytics2.svg";
+import analytics2 from "../assets/images/analytics 1 - Research 2.png";
+import analytics3 from "../assets/images/analytics 2 - Research 2.png";
 
 const contentParagraph1 = "In the critical months following the COVID-19 pandemic's devastating impact on Rwanda's economic landscape, IHEMA Research Team Ltd. was strategically subcontracted by Tango International to spearhead the comprehensive Rapid Review of the Mastercard Foundation COVID-19 Recovery and Resilience Program (CRRP Rwanda). This pivotal evaluation represented one of the foundational projects for our newly established consultancy, demonstrating our capability to deliver high-impact research within tight timelines while maintaining rigorous academic standards.";
 
@@ -37,59 +38,6 @@ const Research2 = () => {
 
     return (
         <div className="research-page">
-            {/* Custom Navbar for Research Page */}
-            <nav className="navbar light-theme">
-                {/* Logo */}
-                <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
-                    <img src={logoBlack} alt="IHEMA Logo" className="navbar-logo" />
-                </Link>
-
-                <div className="right-container">
-                    {/* Hamburger menu */}
-                    <div
-                        className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-                        onClick={handleToggleMenu}
-                    >
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                    </div>
-
-                    {/* Nav links */}
-                    <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-                        {[
-                            { name: 'Services', path: '/#services' },
-                            { name: 'Approach', path: '/#approach' },
-                            { name: 'Research', path: '/#research' },
-                            { name: 'FAQ', path: '/#faq' },
-                            { name: 'Contact', path: '/#contact' },
-                        ].map(
-                            (item) => (
-                                <Link
-                                    key={item.name}
-                                    to={item.path}
-                                    className="nav-link"
-                                    onClick={closeMenu}
-                                >
-                                    <span className="dark-text">
-                                        {item.name}
-                                    </span>
-                                    <img src={ellipse} className="ellipse" alt="" />
-                                </Link>
-                            )
-                        )}
-                    </div>
-                    {/* Get Involved button */}
-                    <Link to="/get-involved" className="nav-actions-link">
-                        <img
-                            src={arrowWhiteButton}
-                            alt="Get Involved Button"
-                            className="white_arrow"
-                        />
-                    </Link>
-                </div>
-            </nav>
-
             {/* Research Content */}
             <div className="Research1-container">
                 <div className="research-heading-container">
@@ -128,7 +76,10 @@ const Research2 = () => {
                         {contentParagraph5}
                     </p>
                     <img src={content2} alt="content" className="content-image" />
-                    <img src={analytics2} alt="Analytics" className="analytics" />
+                    <div className="analytics">
+                        <img src={analytics2} alt="Analytics" className="analytics" />
+                        <img src={analytics3} alt="Analytics" className="analytics" />
+                    </div>
                 </div>
                 <div className="research-card-container">
                     <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />

@@ -54,7 +54,7 @@ const Footer = () => {
         <p>&copy; 2025. iHEMA. All Rights Reserved.</p>
         <div className="footer-social-links">
           <a href="/about">Privacy Policy</a>
-          <a href="/about" className="epique">Website by: EpiqueAI</a>
+          <p>Powered by: <a href="https://www.epiqueai.rw" target="_blank" rel="noopener noreferrer" className="epique">EpiqueAI</a></p>
         </div>
       </div>
     </footer>

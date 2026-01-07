@@ -11,12 +11,13 @@ import content from "../assets/images/content.svg";
 import analytics from "../assets/images/Research1_analytics.svg";
 import researchimage from "../assets/images/Rectangle 45.svg";
 import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/Rectangle 61.svg";
+import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/full-report.svg";
 import reasearchcardborder from "../assets/images/research-card-border.svg";
 import content4 from "../assets/images/content4.svg";
-import analytics4 from "../assets/images/analytics4.svg";
+import analytics3 from "../assets/images/analytics 44.png";
+import analytics2 from "../assets/images/analytics 442.png";
 
 const Research4 = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -27,60 +28,6 @@ const Research4 = () => {
 
     return (
         <div className="research-page">
-            {/* Custom Navbar for Research Page */}
-            <nav className="navbar light-theme">
-                {/* Logo */}
-                <Link to="/" className="navbar-logo-link" onClick={closeMenu}>
-                    <img src={logoBlack} alt="IHEMA Logo" className="navbar-logo" />
-                </Link>
-
-                <div className="right-container">
-                    {/* Hamburger menu */}
-                    <div
-                        className={`hamburger-menu ${menuOpen ? "active" : ""}`}
-                        onClick={handleToggleMenu}
-                    >
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                    </div>
-
-                    {/* Nav links */}
-                    <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-                        {[
-                            { name: 'Services', path: '/#services' },
-                            { name: 'Approach', path: '/#approach' },
-                            { name: 'Research', path: '/#research' },
-                            { name: 'FAQ', path: '/#faq' },
-                            { name: 'Contact', path: '/#contact' },
-                        ].map(
-                            (item) => (
-                                <Link
-                                    key={item.name}
-                                    to={item.path}
-                                    className="nav-link"
-                                    onClick={closeMenu}
-                                >
-                                    <span className="dark-text">
-                                        {item.name}
-                                    </span>
-                                    <img src={ellipse} className="ellipse" alt="" />
-                                </Link>
-                            )
-                        )}
-                    </div>
-
-                    {/* Get Involved button */}
-                    <Link to="/get-involved" className="nav-actions-link">
-                        <img
-                            src={arrowWhiteButton}
-                            alt="Get Involved Button"
-                            className="white_arrow"
-                        />
-                    </Link>
-                </div>
-            </nav>
-
             {/* Research Content */}
             <div className="Research1-container">
                 <div className="research-heading-container">
@@ -122,7 +69,10 @@ const Research4 = () => {
                         A critical value-added service provided by IHEMA Research Team was our translation and cultural adaptation work on survey tools. Recognizing that effective evaluation requires culturally appropriate instruments that resonate with local contexts, we provided detailed feedback on survey language, question framing, and cultural appropriateness of various assessment items. This iterative refinement process ensured that our evaluation tools were not simply translated versions of international instruments but rather culturally grounded tools that could elicit authentic, meaningful responses from Rwandan stakeholders while maintaining methodological rigor and international comparability.
                     </p>
                     <img src={content4} alt="content" className="content-image" />
-                    <img src={analytics4} alt="Analytics" className="analytics" />
+                    <div className="analytics">
+                        <img src={analytics3} alt="Analytics" className="analytics" />
+                        <img src={analytics2} alt="Analytics" className="analytics" />
+                    </div>
                 </div>
                 <div className="research-card-container">
                     <img src={reasearchcardborder} alt="headerborder" className="research-card-border" />

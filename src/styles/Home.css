@@ -234,16 +234,33 @@
   flex: 1;
   font-size: clamp(16px, 2vw, 20px);
 }
+.partner-logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
 .partner-logos {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  width: 100%;
+  gap: 6rem;
+  width: max-content;
+  animation: slideLeftToRight 30s linear infinite;
 }
+
+@keyframes slideLeftToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .partner-logos img {
-  height: 40px; /* Standardize height slightly */
+  height: 40px;
+  flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
@@ -288,6 +305,14 @@
 .data-points-header p {
   width: 100%;
   max-width: 800px;
+}
+
+.data-card-img {
+  margin-left: 14% !important;
+}
+
+.data-card-text {
+  margin-left: 14% !important;
 }
 
 .data-points-box,

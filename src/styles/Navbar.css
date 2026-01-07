@@ -1,17 +1,30 @@
-/* --- Original Styles --- */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box; 
-  z-index: 100;
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.transparent {
   background-color: transparent;
-  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #185A91;
+  padding: 0.8rem 5%;
+}
+
+.navbar.light-theme {
+  position: sticky;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .navbar-logo {
@@ -95,15 +108,25 @@
 }
 
 .nav-actions {
+  width: 240px;
+  height: 62px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   background-color: white;
   border-radius: 34.5px;
-  padding: 5px 20px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar.light-theme .nav-actions {
+  background-color: #185A91;
+  box-shadow: none;
+}
+
+.navbar.light-theme .nav-actions p {
+  color: white;
 }
 
 .nav-actions:hover {
@@ -113,7 +136,7 @@
 .nav-actions p {
   color: #333;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -180,7 +203,7 @@
 
     /* Hide the 'Get Involved' button on smaller screens to save space */
     .navbar .nav-actions-link {
-      display: none;
+        display: none;
     }
 
     /* Animation for the hamburger icon when the menu is active (turns into an 'X') */
