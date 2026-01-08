@@ -359,6 +359,7 @@
 .data-card img {
   width: 47px;
 }
+
 .data-points-p {
   font-size: 16px;
   color: black;
@@ -1521,6 +1522,15 @@
     padding-bottom: 3rem;
     margin: 0 2%;
   }
+
+  .data-card-text {
+  margin-left: 0px !important;
+}
+
+  .data-card-img {
+    margin-left: 0px !important;
+  }
+
 
   .data-points-header {
     padding-bottom: 50px !important;

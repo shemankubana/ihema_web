@@ -17,6 +17,8 @@ import ai from "../assets/icons/Artificial Intelligence.png";
 import biotech from "../assets/icons/Biotech.png";
 import fingerprint from "../assets/icons/Fingerprint.png";
 import layers from "../assets/icons/Layers.png";
+import member1 from "../assets/images/WhatsApp Image 2025-12-22 at 13.28.12.jpeg"
+import member2 from "../assets/images/WhatsApp Image 2025-12-22 at 13.28.13.jpeg"
 
 // Import partner logos
 import unhcrLogo from "../assets/logos/UNHCR 1.png";
@@ -410,7 +412,7 @@ const Home = () => {
               </div>
               <div>
                 <img
-                  src={profileimg}
+                  src={member1}
                   alt="White Arrow"
                   className="profile-image"
                 />
@@ -432,7 +434,7 @@ const Home = () => {
               </div>
               <div>
                 <img
-                  src={profileimg2}
+                  src={member2}
                   alt="profile image"
                   className="profile-image"
                 />
