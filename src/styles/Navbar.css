@@ -108,8 +108,7 @@
 }
 
 .nav-actions {
-  width: 240px;
-  height: 62px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

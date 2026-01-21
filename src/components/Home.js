@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { scrollToContact } from "../utils/scroll";
 import "../styles/Home.css";
 import FAQSection from "./FAQs";
 
@@ -67,6 +68,8 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // scrollToContact imported from ../utils/scroll
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -111,12 +114,12 @@ const Home = () => {
                 <p className="learn-more-p">Communities hold the truth </p>
                 <p className="learn-more-p">— we help bring it to light.</p>
               </div>
-              <Link to="/get-involved" className="nav-actions-link">
+              <a href="#contact" className="nav-actions-link" onClick={scrollToContact}>
                 <div className="nav-actions">
                   <p className="get-involved">Get Involved</p>
                   <img src={arrow} alt="" className="arrow-get-involved" />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -404,7 +407,7 @@ const Home = () => {
               </div>
               <div>
                 <p className="about-us-des">
-                  With obtuse extensive experience in research management and
+                  With extensive experience in research management and
                   evaluation, Justin ensures impactful results and oversees the
                   governance of IHEMA Research Team Ltd.
                 </p>
@@ -421,7 +424,7 @@ const Home = () => {
             </div>
             <div className="profile-card">
               <div>
-                <p className="about-us-name">[ + ] Darya MUTETERI</p>
+                <p className="about-us-name">[ + ] Daria MUTETERI</p>
                 <p className="about-us-role">Managing Director</p>
               </div>
               <div>

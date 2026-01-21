@@ -7,6 +7,7 @@ import logoBlack from '../assets/images/logo_black.svg';
 import ellipse from '../assets/icons/Ellipse 4.svg';
 import arrowWhite from '../assets/icons/arrow_icon.png';
 import arrowGroup36 from '../assets/images/Group 36.svg';
+import { scrollToContact } from '../utils/scroll';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -91,12 +92,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Get Involved button */}
-                <Link to="/get-involved" className="nav-actions-link">
+                <a href="#contact" className="nav-actions-link" onClick={scrollToContact}>
                     <div className="nav-actions">
                         <p>Get Involved</p>
                         <img src={arrowIconSrc} alt="Arrow Icon" />
                     </div>
-                </Link>
+                </a>
             </div>
         </nav>
     );
