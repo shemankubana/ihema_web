@@ -1,12 +1,12 @@
 import React from "react";
 import "../styles/Education.css";
 
-// Import images for the education page
-import mainEduImg from "/assets/images/Rectangle 44.png";
-import cardImg1 from "/assets/images/Health.png";
-import cardImg2 from "/assets/images/Society.png";
-
 const Education = () => {
+  // Asset paths from public folder
+  const mainEduImg = "/assets/images/Rectangle 44.png";
+  const cardImg1 = "/assets/images/Health.png";
+  const cardImg2 = "/assets/images/Society.png";
+
   // Create an array of article data to avoid repetition
   const articles = [
     {

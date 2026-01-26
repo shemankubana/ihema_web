@@ -633,7 +633,7 @@
 }
 
 .research-item {
-  background-image: url("/assets/images/Education.png");
+  background-image: url("../../public/assets/images/Education.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -651,10 +651,10 @@
   transform: scale(1.05);
 }
 .health {
-  background-image: url("/assets/images/Health.png") !important;
+  background-image: url("../../public/assets/images/Health.png") !important;
 }
 .society {
-  background-image: url("/assets/images/Society.png") !important;
+  background-image: url("../../public/assets/images/Society.png") !important;
 }
 .research {
   display: flex; 

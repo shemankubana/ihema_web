@@ -2,22 +2,6 @@ import React, { useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import "../styles/Research1.css";
 import "../styles/Navbar.css";
-import logoWhite from "/assets/icons/Logo.png";
-import logoBlack from "/assets/images/logo_black.svg";
-import ellipse from "/assets/icons/Ellipse 4.svg";
-import arrowWhiteButton from "/assets/icons/Group 12.svg";
-import headerborder from "/assets/images/bordder-line.svg";
-import content from "/assets/images/content.svg";
-import analytics from "/assets/images/Research1_analytics.svg";
-import researchimage from "/assets/images/Rectangle 45.svg";
-import researchimage2 from "/assets/images/Rectangle 60.svg";
-import researchimage3 from "/assets/images/research 3.svg";
-import researchimage4 from "/assets/images/Rectangle 62.svg";
-import fullreport from "/assets/images/full-report.svg";
-import reasearchcardborder from "/assets/images/research-card-border.svg";
-import content2 from "/assets/images/content2.svg";
-import analytics2 from "/assets/images/analytics 1 - Research 2.png";
-import analytics3 from "/assets/images/analytics 2 - Research 2.png";
 
 const contentParagraph1 = "In the critical months following the COVID-19 pandemic's devastating impact on Rwanda's economic landscape, IHEMA Research Team Ltd. was strategically subcontracted by Tango International to spearhead the comprehensive Rapid Review of the Mastercard Foundation COVID-19 Recovery and Resilience Program (CRRP Rwanda). This pivotal evaluation represented one of the foundational projects for our newly established consultancy, demonstrating our capability to deliver high-impact research within tight timelines while maintaining rigorous academic standards.";
 
@@ -30,6 +14,23 @@ const contentParagraph4 = "One of our most significant contributions was the dev
 const contentParagraph5 = "Throughout the evaluation process, IHEMA Research Team maintained close collaborative ties with Tango International researchers, participating in regular synthesis meetings where qualitative findings were triangulated with quantitative data streams. This collaboration enriched the final evaluation report, which we co-authored, ensuring that the narrative authentically represented ground-level realities while meeting international evaluation standards. Our team also contributed to the development of compelling presentations that effectively communicated complex findings to diverse audiences, including the Mastercard Foundation team, government stakeholders, and implementing partners.";
 
 const Research2 = () => {
+  // Asset paths from public folder
+  const logoWhite = "/assets/icons/Logo.png";
+  const logoBlack = "/assets/images/logo_black.svg";
+  const ellipse = "/assets/icons/Ellipse 4.svg";
+  const arrowWhiteButton = "/assets/icons/Group 12.svg";
+  const headerborder = "/assets/images/bordder-line.svg";
+  const content = "/assets/images/content.svg";
+  const analytics = "/assets/images/Research1_analytics.svg";
+  const researchimage = "/assets/images/Rectangle 45.svg";
+  const researchimage2 = "/assets/images/Rectangle 60.svg";
+  const researchimage3 = "/assets/images/research 3.svg";
+  const researchimage4 = "/assets/images/Rectangle 62.svg";
+  const fullreport = "/assets/images/full-report.svg";
+  const reasearchcardborder = "/assets/images/research-card-border.svg";
+  const content2 = "/assets/images/content2.svg";
+  const analytics2 = "/assets/images/analytics 1 - Research 2.png";
+  const analytics3 = "/assets/images/analytics 2 - Research 2.png";
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
 

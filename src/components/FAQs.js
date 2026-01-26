@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Home.css";
-import blueBox from "/assets/icons/rectangle.png";
-import plusIcon from "/assets/icons/Plus.svg";
 
 const FAQSection = () => {
+  const blueBox = "/assets/icons/rectangle.png";
+  const plusIcon = "/assets/icons/Plus.svg";
   const [visibleCount, setVisibleCount] = useState(4);
   const [openIndex, setOpenIndex] = useState(null);
 

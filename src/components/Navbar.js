@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
-// Assets
-import logoWhite from '/assets/icons/Logo.png';
-import logoBlack from '/assets/images/logo_black.svg';
-import ellipse from '/assets/icons/Ellipse 4.svg';
-import arrowWhite from '/assets/icons/arrow_icon.png';
-import arrowGroup36 from '../assets/images/Group 36.svg';
 import { scrollToContact } from '../utils/scroll';
 
 const Navbar = () => {
+    // Asset paths from public folder
+    const logoWhite = '/assets/icons/Logo.png';
+    const logoBlack = '/assets/images/logo_black.svg';
+    const ellipse = '/assets/icons/Ellipse 4.svg';
+    const arrowWhite = '/assets/icons/arrow_icon.png';
+    const arrowGroup36 = '/assets/icons/Group 36.svg';
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();

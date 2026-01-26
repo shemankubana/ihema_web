@@ -2,24 +2,26 @@ import React, { useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import "../styles/Research1.css";
 import "../styles/Navbar.css";
-import logoWhite from "/assets/icons/Logo.png";
-import logoBlack from "/assets/images/logo_black.svg";
-import ellipse from "/assets/icons/Ellipse 4.svg";
-import arrowWhiteButton from "/assets/icons/Group 12.svg";
-import headerborder from "/assets/images/bordder-line.svg";
-import content from "/assets/images/content.svg";
-import analytics from "/assets/images/Research1_analytics.svg";
-import researchimage from "/assets/images/Rectangle 45.svg";
-import researchimage2 from "/assets/images/Rectangle 60.svg";
-import researchimage3 from "/assets/images/research 3.svg";
-import researchimage4 from "/assets/images/Rectangle 62.svg";
-import fullreport from "/assets/images/full-report.svg";
-import reasearchcardborder from "/assets/images/research-card-border.svg";
-import content4 from "/assets/images/content4.svg";
-import analytics3 from "/assets/images/analytics 44.png";
-import analytics2 from "/assets/images/analytics 442.png";
 
 const Research4 = () => {
+    // Asset paths from public folder
+    const logoWhite = "/assets/icons/Logo.png";
+    const logoBlack = "/assets/images/logo_black.svg";
+    const ellipse = "/assets/icons/Ellipse 4.svg";
+    const arrowWhiteButton = "/assets/icons/Group 12.svg";
+    const headerborder = "/assets/images/bordder-line.svg";
+    const content = "/assets/images/content.svg";
+    const analytics = "/assets/images/Research1_analytics.svg";
+    const researchimage = "/assets/images/Rectangle 45.svg";
+    const researchimage2 = "/assets/images/Rectangle 60.svg";
+    const researchimage3 = "/assets/images/research 3.svg";
+    const researchimage4 = "/assets/images/Rectangle 62.svg";
+    const fullreport = "/assets/images/full-report.svg";
+    const reasearchcardborder = "/assets/images/research-card-border.svg";
+    const content4 = "/assets/images/content4.svg";
+    const analytics3 = "/assets/images/analytics 44.png";
+    const analytics2 = "/assets/images/analytics 442.png";
+
     const [menuOpen, setMenuOpen] = useState(false);
     const location = useLocation();
 
