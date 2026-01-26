@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Home.css";
-import blueBox from "../assets/icons/rectangle.png";
-import plusIcon from "../assets/icons/Plus.svg";
+import blueBox from "/assets/icons/rectangle.png";
+import plusIcon from "/assets/icons/Plus.svg";
 
 const FAQSection = () => {
   const [visibleCount, setVisibleCount] = useState(4);

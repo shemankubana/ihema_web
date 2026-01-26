@@ -5,36 +5,36 @@ import "../styles/Home.css";
 import FAQSection from "./FAQs";
 
 // Import assets for the Home page
-import heroBg from "../assets/images/hero_bg.png";
-//import educationImg from "../assets/images/Education.png";
-//import healthImg from "../assets/images/Health.png";
-//import societyImg from "../assets/images/Society.png";
-//import arrowIcon from "../assets/icons/arrow_icon.png";
-//import plusIcon from "../assets/icons/Plus.png";
-import arrow from "../assets/icons/arrow_icon.png";
-import whitearrow from "../assets/icons/arrow_icon.png";
-import blueBox from "../assets/icons/rectangle.png";
-import ai from "../assets/icons/Artificial Intelligence.png";
-import biotech from "../assets/icons/Biotech.png";
-import fingerprint from "../assets/icons/Fingerprint.png";
-import layers from "../assets/icons/Layers.png";
-import member1 from "../assets/images/WhatsApp Image 2025-12-22 at 13.28.12.jpeg"
-import member2 from "../assets/images/WhatsApp Image 2025-12-22 at 13.28.13.jpeg"
+import heroBg from "/assets/images/hero_bg.png";
+//import educationImg from "/assets/images/Education.png";
+//import healthImg from "/assets/images/Health.png";
+//import societyImg from "/assets/images/Society.png";
+//import arrowIcon from "/assets/icons/arrow_icon.png";
+//import plusIcon from "/assets/icons/Plus.png";
+import arrow from "/assets/icons/arrow_icon.png";
+import whitearrow from "/assets/icons/arrow_icon.png";
+import blueBox from "/assets/icons/rectangle.png";
+import ai from "/assets/icons/Artificial Intelligence.png";
+import biotech from "/assets/icons/Biotech.png";
+import fingerprint from "/assets/icons/Fingerprint.png";
+import layers from "/assets/icons/Layers.png";
+import member1 from "/assets/images/WhatsApp Image 2025-12-22 at 13.28.12.jpeg"
+import member2 from "/assets/images/WhatsApp Image 2025-12-22 at 13.28.13.jpeg"
 
 // Import partner logos
-import unhcrLogo from "../assets/logos/UNHCR 1.png";
-import worldVisionLogo from "../assets/logos/WV 1.png";
-import v37Logo from "../assets/logos/V37 1.png";
-import vsoLogo from "../assets/logos/VSO 1.png";
-import wfpLogo from "../assets/logos/WFP 1.png";
-import mscLogo from "../assets/logos/MSC 1.png";
-import researchimage from "../assets/images/Rectangle 45.svg";
-import researchimage2 from "../assets/images/Rectangle 60.svg";
-import researchimage3 from "../assets/images/research 3.svg";
-import researchimage4 from "../assets/images/Rectangle 62.svg";
-import fullreport from "../assets/images/Group 14.svg";
-import researchborder from "../assets/icons/Line 32.svg";
-import readmore from "../assets/images/Group 31-2.svg";
+import unhcrLogo from "/assets/logos/UNHCR 1.png";
+import worldVisionLogo from "/assets/logos/WV 1.png";
+import v37Logo from "/assets/logos/V37 1.png";
+import vsoLogo from "/assets/logos/VSO 1.png";
+import wfpLogo from "/assets/logos/WFP 1.png";
+import mscLogo from "/assets/logos/MSC 1.png";
+import researchimage from "/assets/images/Rectangle 45.svg";
+import researchimage2 from "/assets/images/Rectangle 60.svg";
+import researchimage3 from "/assets/images/research 3.svg";
+import researchimage4 from "/assets/images/Rectangle 62.svg";
+import fullreport from "/assets/images/Group 14.svg";
+import researchborder from "/assets/icons/Line 32.svg";
+import readmore from "/assets/images/Group 31-2.svg";
 
 // --- Your Original Home Component ---
 const Home = () => {

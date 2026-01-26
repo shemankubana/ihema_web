@@ -2,9 +2,9 @@ import React from "react";
 import "../styles/Education.css";
 
 // Import images for the education page
-import mainEduImg from "../assets/images/Rectangle 44.png";
-import cardImg1 from "../assets/images/Health.png";
-import cardImg2 from "../assets/images/Society.png";
+import mainEduImg from "/assets/images/Rectangle 44.png";
+import cardImg1 from "/assets/images/Health.png";
+import cardImg2 from "/assets/images/Society.png";
 
 const Education = () => {
   // Create an array of article data to avoid repetition

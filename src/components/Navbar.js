@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 // Assets
-import logoWhite from '../assets/icons/Logo.png';
-import logoBlack from '../assets/images/logo_black.svg';
-import ellipse from '../assets/icons/Ellipse 4.svg';
-import arrowWhite from '../assets/icons/arrow_icon.png';
+import logoWhite from '/assets/icons/Logo.png';
+import logoBlack from '/assets/images/logo_black.svg';
+import ellipse from '/assets/icons/Ellipse 4.svg';
+import arrowWhite from '/assets/icons/arrow_icon.png';
 import arrowGroup36 from '../assets/images/Group 36.svg';
 import { scrollToContact } from '../utils/scroll';
 
