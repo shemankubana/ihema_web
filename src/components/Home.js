@@ -34,9 +34,7 @@ import researchimage3 from "../assets/images/research 3.svg";
 import researchimage4 from "../assets/images/Rectangle 62.svg";
 import fullreport from "../assets/images/Group 14.svg";
 import researchborder from "../assets/icons/Line 32.svg";
-import profileimg from "../assets/images/Rectangle 72.svg";
 import readmore from "../assets/images/Group 31-2.svg";
-import profileimg2 from "../assets/images/Rectangle 73.svg";
 
 // --- Your Original Home Component ---
 const Home = () => {
